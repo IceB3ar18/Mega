@@ -1,0 +1,114 @@
+---- Minecraft Crash Report ----
+// Don't be sad, have a hug! <3
+
+Time: 19.03.24 19:31
+Description: Updating screen events
+
+java.lang.NullPointerException: Updating screen events
+	at com.sun.media.sound.StandardMidiFileReader.getSequence(StandardMidiFileReader.java:207)
+	at javax.sound.midi.MidiSystem.getSequence(MidiSystem.java:841)
+	at com.sun.media.sound.SoftMidiAudioFileReader.getAudioInputStream(SoftMidiAudioFileReader.java:178)
+	at javax.sound.sampled.AudioSystem.getAudioInputStream(AudioSystem.java:1147)
+	at club.mega.util.SoundUtil.play(SoundUtil.java:26)
+	at club.mega.module.Module.onEnable(Module.java:40)
+	at club.mega.module.Module.toggle(Module.java:65)
+	at club.mega.gui.click.ModuleButton.mouseReleased(ModuleButton.java:96)
+	at club.mega.gui.click.Panel.mouseReleased(Panel.java:126)
+	at club.mega.gui.click.ClickGUI.lambda$mouseReleased$2(ClickGUI.java:82)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at club.mega.gui.click.ClickGUI.mouseReleased(ClickGUI.java:81)
+	at net.minecraft.client.gui.GuiScreen.handleMouseInput(GuiScreen.java:548)
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:510)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1644)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:961)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:282)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at com.sun.media.sound.StandardMidiFileReader.getSequence(StandardMidiFileReader.java:207)
+	at javax.sound.midi.MidiSystem.getSequence(MidiSystem.java:841)
+	at com.sun.media.sound.SoftMidiAudioFileReader.getAudioInputStream(SoftMidiAudioFileReader.java:178)
+	at javax.sound.sampled.AudioSystem.getAudioInputStream(AudioSystem.java:1147)
+	at club.mega.util.SoundUtil.play(SoundUtil.java:26)
+	at club.mega.module.Module.onEnable(Module.java:40)
+	at club.mega.module.Module.toggle(Module.java:65)
+	at club.mega.gui.click.ModuleButton.mouseReleased(ModuleButton.java:96)
+	at club.mega.gui.click.Panel.mouseReleased(Panel.java:126)
+	at club.mega.gui.click.ClickGUI.lambda$mouseReleased$2(ClickGUI.java:82)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at club.mega.gui.click.ClickGUI.mouseReleased(ClickGUI.java:81)
+	at net.minecraft.client.gui.GuiScreen.handleMouseInput(GuiScreen.java:548)
+	at net.minecraft.client.gui.GuiScreen.handleInput(GuiScreen.java:510)
+
+-- Affected screen --
+Details:
+	Screen name: club.mega.gui.click.ClickGUI
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Fire_Phoenix18'/405, l='MpServer', x=-198,97, y=91,00, z=1713,48]]
+	Chunk stats: MultiplayerChunkCache: 289, 289
+	Level seed: 0
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: 236,00,64,00,256,00 - World: (236,64,256), Chunk: (at 12,4,0 in 14,16; contains blocks 224,0,256 to 239,255,271), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 20500 game time, 20500 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 65 total; [EntitySpider['Spider'/512, l='MpServer', x=-234,72, y=13,84, z=1766,69], EntitySkeleton['Skeleton'/516, l='MpServer', x=-215,50, y=32,00, z=1640,50], EntitySkeleton['Skeleton'/517, l='MpServer', x=-209,63, y=37,00, z=1652,09], EntitySkeleton['Skeleton'/518, l='MpServer', x=-215,84, y=35,00, z=1653,50], EntityBat['Bat'/519, l='MpServer', x=-216,75, y=36,10, z=1693,44], EntitySheep['Sheep'/520, l='MpServer', x=-209,56, y=70,00, z=1689,53], EntitySheep['Sheep'/521, l='MpServer', x=-210,94, y=81,00, z=1700,47], EntitySheep['Sheep'/524, l='MpServer', x=-201,66, y=66,00, z=1646,78], EntityZombie['Zombie'/525, l='MpServer', x=-206,50, y=38,00, z=1651,50], EntitySheep['Sheep'/526, l='MpServer', x=-202,25, y=66,00, z=1648,25], EntityBat['Bat'/527, l='MpServer', x=-197,91, y=29,66, z=1678,28], EntityBat['Bat'/536, l='MpServer', x=-178,16, y=16,03, z=1635,59], EntityMinecartChest['container.minecart'/537, l='MpServer', x=-178,50, y=32,06, z=1660,09], EntitySheep['Sheep'/538, l='MpServer', x=-188,84, y=65,00, z=1659,50], EntitySheep['Sheep'/539, l='MpServer', x=-185,97, y=64,00, z=1659,91], EntityMinecartChest['container.minecart'/540, l='MpServer', x=-178,50, y=32,06, z=1670,50], EntityCreeper['Creeper'/541, l='MpServer', x=-182,50, y=30,00, z=1709,50], EntitySkeleton['Skeleton'/542, l='MpServer', x=-184,50, y=33,00, z=1704,50], EntitySkeleton['Skeleton'/543, l='MpServer', x=-185,50, y=33,00, z=1701,50], EntitySheep['Sheep'/544, l='MpServer', x=-188,47, y=71,00, z=1714,44], EntityMinecartChest['container.minecart'/545, l='MpServer', x=-179,50, y=27,06, z=1728,88], EntitySheep['Sheep'/546, l='MpServer', x=-187,44, y=69,00, z=1743,66], EntityChicken['Chicken'/547, l='MpServer', x=-177,06, y=62,63, z=1789,13], EntityChicken['Chicken'/549, l='MpServer', x=-187,50, y=64,00, z=1779,63], EntityItem['item.item.rottenFlesh'/555, l='MpServer', x=-171,53, y=70,00, z=1716,63], EntitySheep['Sheep'/556, l='MpServer', x=-172,69, y=66,00, z=1741,41], EntityCreeper['Creeper'/560, l='MpServer', x=-147,25, y=31,00, z=1643,34], EntityBat['Bat'/561, l='MpServer', x=-146,63, y=32,10, z=1636,88], EntityMinecartChest['container.minecart'/562, l='MpServer', x=-146,50, y=39,06, z=1655,50], EntityBat['Bat'/563, l='MpServer', x=-148,75, y=41,10, z=1649,75], EntityMinecartChest['container.minecart'/564, l='MpServer', x=-148,50, y=39,06, z=1667,50], EntitySkeleton['Skeleton'/565, l='MpServer', x=-149,50, y=38,00, z=1737,50], EntityCreeper['Creeper'/571, l='MpServer', x=-137,50, y=26,00, z=1652,50], EntityCreeper['Creeper'/572, l='MpServer', x=-135,66, y=26,00, z=1652,06], EntityPlayerSP['Fire_Phoenix18'/405, l='MpServer', x=-198,97, y=91,00, z=1713,48], EntitySheep['Sheep'/460, l='MpServer', x=-276,41, y=64,00, z=1643,53], EntitySheep['Sheep'/461, l='MpServer', x=-276,78, y=68,00, z=1636,47], EntityPig['Pig'/467, l='MpServer', x=-273,84, y=67,00, z=1687,53], EntityCreeper['Creeper'/468, l='MpServer', x=-274,31, y=17,00, z=1711,69], EntityZombie['Zombie'/469, l='MpServer', x=-274,88, y=17,00, z=1710,88], EntityCreeper['Creeper'/470, l='MpServer', x=-274,50, y=17,00, z=1705,50], EntityChicken['Chicken'/473, l='MpServer', x=-277,50, y=66,00, z=1709,22], EntityMinecartChest['container.minecart'/480, l='MpServer', x=-274,50, y=16,06, z=1748,50], EntityCow['Cow'/481, l='MpServer', x=-276,28, y=72,00, z=1755,22], EntitySheep['Sheep'/487, l='MpServer', x=-266,09, y=67,00, z=1656,75], EntityMinecartChest['container.minecart'/488, l='MpServer', x=-266,50, y=14,06, z=1716,50], EntityMinecartChest['container.minecart'/489, l='MpServer', x=-257,50, y=16,06, z=1722,50], EntityZombie['Zombie'/490, l='MpServer', x=-262,50, y=16,00, z=1716,50], EntityZombie['Zombie'/491, l='MpServer', x=-258,66, y=16,00, z=1717,34], EntityZombie['Zombie'/492, l='MpServer', x=-256,66, y=16,00, z=1718,34], EntitySkeleton['Skeleton'/493, l='MpServer', x=-266,50, y=13,00, z=1763,50], EntitySkeleton['Skeleton'/494, l='MpServer', x=-271,63, y=13,00, z=1767,47], EntitySkeleton['Skeleton'/495, l='MpServer', x=-265,50, y=13,00, z=1761,50], EntitySkeleton['Skeleton'/496, l='MpServer', x=-267,50, y=13,00, z=1762,50], EntityCreeper['Creeper'/497, l='MpServer', x=-269,50, y=17,00, z=1773,50], EntityMinecartChest['container.minecart'/502, l='MpServer', x=-252,50, y=27,06, z=1641,50], EntityBat['Bat'/503, l='MpServer', x=-246,13, y=27,10, z=1681,25], EntitySkeleton['Skeleton'/504, l='MpServer', x=-248,50, y=24,00, z=1739,50], EntityZombie['Zombie'/505, l='MpServer', x=-242,50, y=12,00, z=1767,50], EntityCow['Cow'/506, l='MpServer', x=-253,03, y=66,00, z=1780,47], EntitySheep['Sheep'/507, l='MpServer', x=-233,47, y=70,00, z=1663,56], EntityItem['item.item.rottenFlesh'/508, l='MpServer', x=-230,16, y=68,00, z=1657,06], EntityMinecartChest['container.minecart'/509, l='MpServer', x=-237,50, y=25,06, z=1692,50], EntitySpider['Spider'/510, l='MpServer', x=-237,50, y=36,00, z=1683,50], EntitySpider['Spider'/511, l='MpServer', x=-234,31, y=12,00, z=1767,56]]
+	Retry entities: 0 total; []
+	Server brand: vanilla
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:356)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2524)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:303)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.9
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 1.8.0_392, Temurin
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Temurin
+	Memory: 267882832 bytes (255 MB) / 922222592 bytes (879 MB) up to 3797417984 bytes (3621 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 12, tallocated: 94
+	Launched Version: mcp
+	LWJGL: 2.9.4
+	OpenGL: NVIDIA GeForce GTX 1650/PCIe/SSE2 GL version 4.6.0 NVIDIA 546.33, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: WitherArmy.zip
+	Current Language: English (UK)
+	Profiler Position: N/A (disabled)
+	CPU: 8x Intel(R) Core(TM) i5-9300H CPU @ 2.40GHz
+	OptiFine Version: OptiFine_1.8.9_HD_U_M6_pre2
+	OptiFine Build: ~~NULL~~
+	Render Distance Chunks: 8
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6.0 NVIDIA 546.33
+	OpenGlRenderer: NVIDIA GeForce GTX 1650/PCIe/SSE2
+	OpenGlVendor: NVIDIA Corporation
+	CpuCount: 8

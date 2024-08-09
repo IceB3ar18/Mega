@@ -1,0 +1,104 @@
+---- Minecraft Crash Report ----
+// I bet Cylons wouldn't have this problem.
+
+Time: 23.03.24 16:03
+Description: Rendering screen
+
+java.lang.NullPointerException: Rendering screen
+	at club.mega.module.impl.hud.Shadow.setupGlowUniforms(Shadow.java:108)
+	at club.mega.module.impl.hud.Shadow.render2d(Shadow.java:73)
+	at club.mega.gui.click.components.BooleanComponent.drawComponent(BooleanComponent.java:43)
+	at club.mega.gui.click.ModuleButton.drawButton(ModuleButton.java:77)
+	at club.mega.gui.click.Panel.drawScreen(Panel.java:75)
+	at club.mega.gui.click.ClickGUI.lambda$drawScreen$0(ClickGUI.java:65)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at club.mega.gui.click.ClickGUI.drawScreen(ClickGUI.java:64)
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1320)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:991)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:284)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at club.mega.module.impl.hud.Shadow.setupGlowUniforms(Shadow.java:108)
+	at club.mega.module.impl.hud.Shadow.render2d(Shadow.java:73)
+	at club.mega.gui.click.components.BooleanComponent.drawComponent(BooleanComponent.java:43)
+	at club.mega.gui.click.ModuleButton.drawButton(ModuleButton.java:77)
+	at club.mega.gui.click.Panel.drawScreen(Panel.java:75)
+	at club.mega.gui.click.ClickGUI.lambda$drawScreen$0(ClickGUI.java:65)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at club.mega.gui.click.ClickGUI.drawScreen(ClickGUI.java:64)
+
+-- Screen render details --
+Details:
+	Screen name: club.mega.gui.click.ClickGUI
+	Mouse location: Scaled: (372, 294). Absolute: (745, 421)
+	Screen size: Scaled: (960, 505). Absolute: (1920, 1009). Scale factor of 2
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Fire_Phoenix18'/404, l='MpServer', x=-1197,21, y=78,00, z=2054,24]]
+	Chunk stats: MultiplayerChunkCache: 263, 263
+	Level seed: 0
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: 236,00,64,00,256,00 - World: (236,64,256), Chunk: (at 12,4,0 in 14,16; contains blocks 224,0,256 to 239,255,271), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 7000 game time, 7000 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 50 total; [EntitySkeleton['Skeleton'/515, l='MpServer', x=-1130,88, y=63,00, z=1934,75], EntitySkeleton['Skeleton'/652, l='MpServer', x=-1238,50, y=63,00, z=1975,50], EntitySkeleton['Skeleton'/653, l='MpServer', x=-1227,50, y=63,00, z=1961,50], EntitySpider['Spider'/654, l='MpServer', x=-1255,50, y=49,00, z=2043,50], EntitySkeleton['Skeleton'/655, l='MpServer', x=-1225,50, y=63,00, z=1963,50], EntitySkeleton['Skeleton'/529, l='MpServer', x=-1116,19, y=62,16, z=1988,84], EntityZombie['Zombie'/657, l='MpServer', x=-1224,50, y=63,00, z=1959,50], EntityZombie['Zombie'/658, l='MpServer', x=-1223,50, y=63,00, z=1956,50], EntitySkeleton['Skeleton'/405, l='MpServer', x=-1192,13, y=19,00, z=2013,50], EntityPlayerSP['Fire_Phoenix18'/404, l='MpServer', x=-1197,21, y=78,00, z=2054,24], EntitySpider['Spider'/440, l='MpServer', x=-1268,50, y=70,00, z=1933,50], EntityRabbit['Rabbit'/445, l='MpServer', x=-1256,03, y=63,00, z=2012,81], EntitySpider['Spider'/446, l='MpServer', x=-1258,50, y=63,00, z=2007,50], EntitySpider['Spider'/447, l='MpServer', x=-1261,50, y=63,00, z=2007,50], EntityZombie['Zombie'/703, l='MpServer', x=-1267,50, y=69,00, z=1977,50], EntityRabbit['Rabbit'/448, l='MpServer', x=-1259,03, y=63,00, z=2018,16], EntityZombie['Zombie'/704, l='MpServer', x=-1269,50, y=69,00, z=1977,50], EntityBat['Bat'/449, l='MpServer', x=-1259,66, y=55,10, z=2026,59], EntityZombie['Zombie'/705, l='MpServer', x=-1272,50, y=47,00, z=2101,50], EntityRabbit['Rabbit'/450, l='MpServer', x=-1253,47, y=65,00, z=2029,94], EntityRabbit['Rabbit'/453, l='MpServer', x=-1245,81, y=64,00, z=2018,19], EntityRabbit['Rabbit'/454, l='MpServer', x=-1246,53, y=69,00, z=2034,19], EntitySkeleton['Skeleton'/712, l='MpServer', x=-1271,50, y=47,00, z=2102,50], EntitySkeleton['Skeleton'/713, l='MpServer', x=-1217,50, y=64,00, z=2022,50], EntitySkeleton['Skeleton'/459, l='MpServer', x=-1222,50, y=38,00, z=2034,50], EntityRabbit['Rabbit'/460, l='MpServer', x=-1226,84, y=64,00, z=2036,06], EntityCreeper['Creeper'/461, l='MpServer', x=-1218,50, y=64,00, z=2040,50], EntitySpider['Spider'/717, l='MpServer', x=-1165,50, y=63,00, z=1964,50], EntityZombie['Zombie'/462, l='MpServer', x=-1220,72, y=64,00, z=2037,16], EntityZombie['Zombie'/463, l='MpServer', x=-1225,06, y=64,00, z=2039,38], EntityZombie['Zombie'/721, l='MpServer', x=-1193,50, y=61,00, z=2045,50], EntitySkeleton['Skeleton'/723, l='MpServer', x=-1221,50, y=64,00, z=2021,50], EntityZombie['Zombie'/470, l='MpServer', x=-1208,50, y=29,00, z=2029,50], EntityCow['Cow'/471, l='MpServer', x=-1215,50, y=64,00, z=2016,75], EntityCow['Cow'/472, l='MpServer', x=-1213,13, y=64,00, z=2027,38], EntityCow['Cow'/473, l='MpServer', x=-1215,28, y=64,00, z=2018,19], EntityZombie['Zombie'/474, l='MpServer', x=-1203,09, y=64,00, z=2036,66], EntityCreeper['Creeper'/475, l='MpServer', x=-1215,50, y=39,00, z=2049,50], EntityCreeper['Creeper'/476, l='MpServer', x=-1211,50, y=67,00, z=2070,50], EntityZombie['Zombie'/479, l='MpServer', x=-1192,50, y=35,00, z=2033,50], EntityRabbit['Rabbit'/480, l='MpServer', x=-1187,59, y=64,00, z=2079,84], EntitySkeleton['Skeleton'/481, l='MpServer', x=-1187,50, y=30,00, z=2085,50], EntityZombie['Zombie'/494, l='MpServer', x=-1172,50, y=29,00, z=2034,50], EntitySpider['Spider'/495, l='MpServer', x=-1178,00, y=62,16, z=2045,00], EntityBat['Bat'/496, l='MpServer', x=-1178,25, y=27,09, z=2069,41], EntityCow['Cow'/497, l='MpServer', x=-1171,44, y=72,00, z=2076,72], EntityCow['Cow'/498, l='MpServer', x=-1172,31, y=64,00, z=2087,56], EntitySkeleton['Skeleton'/504, l='MpServer', x=-1165,50, y=65,00, z=2039,50], EntityCow['Cow'/505, l='MpServer', x=-1156,84, y=74,00, z=2071,94], EntityCow['Cow'/506, l='MpServer', x=-1165,56, y=64,00, z=2083,13]]
+	Retry entities: 0 total; []
+	Server brand: vanilla
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:356)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2526)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:305)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.9
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 1.8.0_392, Temurin
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Temurin
+	Memory: 868169440 bytes (827 MB) / 1245708288 bytes (1188 MB) up to 3797417984 bytes (3621 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 1, tcache: 1, allocated: 12, tallocated: 94
+	Launched Version: mcp
+	LWJGL: 2.9.4
+	OpenGL: NVIDIA GeForce GTX 1650/PCIe/SSE2 GL version 4.6.0 NVIDIA 546.33, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: WitherArmy.zip
+	Current Language: English (UK)
+	Profiler Position: N/A (disabled)
+	CPU: 8x Intel(R) Core(TM) i5-9300H CPU @ 2.40GHz
+	OptiFine Version: OptiFine_1.8.9_HD_U_M6_pre2
+	OptiFine Build: ~~NULL~~
+	Render Distance Chunks: 8
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6.0 NVIDIA 546.33
+	OpenGlRenderer: NVIDIA GeForce GTX 1650/PCIe/SSE2
+	OpenGlVendor: NVIDIA Corporation
+	CpuCount: 8

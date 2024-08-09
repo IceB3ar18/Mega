@@ -1,0 +1,394 @@
+{
+  "KillAura": {
+    "Toggled": true,
+    "Setting": {
+      "Mode": "Switch",
+      "Switch delay": 300.0,
+      "Priority": "Health",
+      "Attack mode": "Click",
+      "Attack on": "Legit",
+      "Pre Range": 0.6,
+      "Randomize pre Range": true,
+      "Range": 3.6,
+      "CalcRotSpeed": false,
+      "YawSpeedMin": 38.0,
+      "YawSpeedMax": 79.0,
+      "PitchSpeedMin": 37.0,
+      "PitchSpeedMax": 69.0,
+      "Inaccuracy": 0.0,
+      "Predict": true,
+      "Heuristics": true,
+      "Clamp Yaw": false,
+      "Randomize range": true,
+      "Min APS": 119.0,
+      "Max APS": 255.0,
+      "PerfectHit": false,
+      "Auto. block": false,
+      "Block range": 4.0,
+      "Block chance": 20.0,
+      "Min unblock ticks": 8.0,
+      "Max unblock ticks": 13.0,
+      "Fake block": false,
+      "Pre swing": true,
+      "MoveFix": true,
+      "SilentMoveFix": true,
+      "VelocityFix": true,
+      "Keep sprint": false,
+      "Disable on death": true,
+      "Attack death": false,
+      "Players": true
+    }
+  },
+  "Criticals": {
+    "Toggled": false,
+    "Setting": {
+      "Mode": "Packet"
+    }
+  },
+  "Velocity": {
+    "Toggled": false,
+    "Setting": {
+      "Mode": "Grim",
+      "XZVelocity": 0.6,
+      "YVelocity": 20.0,
+      "XZIntave": 0.0,
+      "Jump": true,
+      "Explosion": true,
+      "Push": 1.1,
+      "PushStart": 9.0,
+      "PushEnd": 2.0,
+      "ReverseStart": 9.0,
+      "TickZero": 4.0,
+      "TickZeroY": false,
+      "ReverseStrafe": false,
+      "OnGround": false,
+      "HitBug": false
+    }
+  },
+  "BackTrack": {
+    "Toggled": true,
+    "Setting": {
+      "MaxHitRange": 6.0,
+      "Delay": 218.0,
+      "OnlyWhenNeed": true,
+      "Esp": true,
+      "CancelVelocity": true,
+      "CancelKeepAlive": true,
+      "CancelTimeUpdate": true
+    }
+  },
+  "STap": {
+    "Toggled": false,
+    "Setting": {}
+  },
+  "WTap": {
+    "Toggled": true,
+    "Setting": {}
+  },
+  "TickBase": {
+    "Toggled": false,
+    "Setting": {
+      "Range": 3.2,
+      "Ticks": 1.0,
+      "Stop": true,
+      "Mode": "Future"
+    }
+  },
+  "AutoGApple": {
+    "Toggled": false,
+    "Setting": {
+      "Health": 15.0,
+      "Delay": 650.0,
+      "Item spoof": true
+    }
+  },
+  "AutoClicker": {
+    "Toggled": false,
+    "Setting": {
+      "Max APS": 14.0,
+      "Min APS": 12.0
+    }
+  },
+  "AntiBot": {
+    "Toggled": false,
+    "Setting": {
+      "Mode": "Matrix"
+    }
+  },
+  "RotationHandler": {
+    "Toggled": true,
+    "Setting": {
+      "YawSpeedMin": 17.0,
+      "YawSpeedMax": 30.0,
+      "PitchSpeedMin": 16.0,
+      "PitchSpeedMax": 29.0,
+      "MoveFix": true,
+      "SilentMoveFix": true
+    }
+  },
+  "NoFall": {
+    "Toggled": false,
+    "Setting": {
+      "Mode": "SpoofGround",
+      "AimRange": 5.0,
+      "MinFallDist": 2.0,
+      "MinFallDistLegit": 6.0,
+      "YawSpeed": 40.0,
+      "PitchSpeed": 40.0,
+      "Delay": 110.0
+    }
+  },
+  "NoRotate": {
+    "Toggled": false,
+    "Setting": {}
+  },
+  "AutoRespawn": {
+    "Toggled": true,
+    "Setting": {}
+  },
+  "Scaffold": {
+    "Toggled": false,
+    "Setting": {
+      "Mode": "Snap",
+      "YawSpeed": 180.0,
+      "PitchSpeed": 180.0,
+      "Backup": 0.0,
+      "SpamClick": true,
+      "IntaveHit": true,
+      "ClickDelay": 200.0,
+      "MoveFix": true,
+      "SilentMoveFix": true,
+      "SameY": false,
+      "Breezly": false,
+      "AutoJump": true,
+      "Jump Delay": 8.0,
+      "NoSwing": false,
+      "Predict": true,
+      "Sprint": true,
+      "Tower": "None",
+      "TowerMove": true,
+      "SneakDelay": 2000.0,
+      "SilentMode": "Spoof",
+      "ESP": true,
+      "Block Count": "Augustus"
+    }
+  },
+  "Disabler": {
+    "Toggled": false,
+    "Setting": {
+      "PingSpoof": false,
+      "RoyalPixels": false,
+      "MinemenStrafe": false,
+      "UniversoCraft": false,
+      "Spectate": false,
+      "C00PacketKeepAlive": false,
+      "C01PacketPing": false,
+      "C0BPacketEntityAction": false,
+      "PingSpooC13PacketPlayerAbilitiesf": false,
+      "C0FPacketConfirmTransaction": false,
+      "NCPTimerSemi": false,
+      "HAC": false,
+      "NoSprint": false,
+      "BLC-Spoof": false,
+      "AAC5": false,
+      "NoFlag": false,
+      "FrequencyFull": false,
+      "Debug": false,
+      "Delay": 1000.0
+    }
+  },
+  "Range": {
+    "Toggled": false,
+    "Setting": {
+      "Range": 3.0
+    }
+  },
+  "BetterHits": {
+    "Toggled": false,
+    "Setting": {}
+  },
+  "ChestStealer": {
+    "Toggled": true,
+    "Setting": {
+      "ClickMode": "Interval",
+      "MinDelay": 0.0,
+      "MaxDelay": 0.0,
+      "MinInterval": 2.0,
+      "MaxInterval": 6.0,
+      "Delay": 100.0,
+      "Random Strength": 47.0,
+      "StartDelay": 255.0,
+      "Random": false,
+      "FailClicks": true,
+      "FailChance": 4.0,
+      "Intelligent": true,
+      "AutoClose": true,
+      "CloseDelay": 391.0,
+      "SpamClick": false
+    }
+  },
+  "AutoArmor": {
+    "Toggled": true,
+    "Setting": {
+      "Mode": "OpenInv",
+      "StartDelay": 200.0,
+      "Delay": 90.0,
+      "Hotbar": true,
+      "GommeQSG": true,
+      "NoMove": false,
+      "HStartDelay": 200.0,
+      "HotbarDelay": 100.0
+    }
+  },
+  "InvCleaner": {
+    "Toggled": true,
+    "Setting": {
+      "Mode": "OpenInv",
+      "CleanMode": "Clean",
+      "NoMove": true,
+      "ClickMode": "Interval",
+      "MinDelay": 0.0,
+      "MaxDelay": 282.0,
+      "MinInterval": 8.0,
+      "MaxInterval": 10.0,
+      "Delay": 182.0,
+      "StartDelay": 364.0,
+      "Random Strength": 55.0,
+      "FailClicks": true,
+      "FailChance": 4.0,
+      "Sort": true
+    }
+  },
+  "FastPlace": {
+    "Toggled": false,
+    "Setting": {
+      "Max APS": 14.0,
+      "Min APS": 12.0
+    }
+  },
+  "Bedfucker": {
+    "Toggled": false,
+    "Setting": {
+      "Block": "Bed",
+      "Action": "Break",
+      "ThroughWall": true,
+      "Instant": true,
+      "MoveFix": true,
+      "FriendMyBlock": true,
+      "CustomID": 26.0,
+      "YawSpeed": 180.0,
+      "PitchSpeed": 180.0,
+      "Delay": 500.0,
+      "Range": 4.5
+    }
+  },
+  "MCF": {
+    "Toggled": true,
+    "Setting": {}
+  },
+  "Regen": {
+    "Toggled": false,
+    "Setting": {
+      "Packets": 200.0
+    }
+  },
+  "ChestAura": {
+    "Toggled": false,
+    "Setting": {
+      "MoveFix": true,
+      "YawSpeed": 180.0,
+      "PitchSpeed": 180.0,
+      "Delay": 500.0,
+      "Range": 4.5
+    }
+  },
+  "Sprint": {
+    "Toggled": true,
+    "Setting": {}
+  },
+  "Speed": {
+    "Toggled": false,
+    "Setting": {
+      "Mode": "TeleportAbuse",
+      "Speed": 10.0,
+      "Height": 0.2,
+      "DMGSpeed": 1.0,
+      "DamageBoost": false,
+      "Strafe": false
+    }
+  },
+  "Flight": {
+    "Toggled": false,
+    "Setting": {
+      "Mode": "Vanilla",
+      "AutoJump": true,
+      "OnGroundPacket": true,
+      "Speed": 1.0,
+      "VerusSpeed": 1.0,
+      "DisableOnWorld": false
+    }
+  },
+  "Step": {
+    "Toggled": false,
+    "Setting": {
+      "Height": 1.0
+    }
+  },
+  "InvMove": {
+    "Toggled": true,
+    "Setting": {
+      "ClickGui only": true
+    }
+  },
+  "NoSlow": {
+    "Toggled": true,
+    "Setting": {
+      "StartSlow": false,
+      "Slowdown": true,
+      "Sprint": true,
+      "Switch": false,
+      "Toggle": false,
+      "Bug": false,
+      "Timer": false,
+      "Forward": 1.0,
+      "Strafe": 1.0,
+      "TimerSpeed": 1.0
+    }
+  },
+  "No Jump Delay": {
+    "Toggled": true,
+    "Setting": {
+      "KillAuraDisable": false
+    }
+  },
+  "Timer": {
+    "Toggled": false,
+    "Setting": {
+      "Speed": 1.0
+    }
+  },
+  "AntiVoid": {
+    "Toggled": false,
+    "Setting": {
+      "Mode": "Watchdog"
+    }
+  },
+  "V-Clip": {
+    "Toggled": false,
+    "Setting": {}
+  },
+  "AutoTool": {
+    "Toggled": true,
+    "Setting": {
+      "Item spoof": true
+    }
+  },
+  "Strafe": {
+    "Toggled": false,
+    "Setting": {
+      "Mode": "Normal",
+      "WhileKB": false,
+      "OnlyOnGround": false
+    }
+  }
+}

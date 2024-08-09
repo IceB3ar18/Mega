@@ -1,0 +1,131 @@
+---- Minecraft Crash Report ----
+// Hi. I'm Minecraft, and I'm a crashaholic.
+
+Time: 03.09.23 10:22
+Description: Rendering item
+
+com.google.common.util.concurrent.UncheckedExecutionException: java.lang.NullPointerException
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2201)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3934)
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3938)
+	at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4821)
+	at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:4827)
+	at net.minecraft.client.resources.SkinManager.loadSkinFromCache(SkinManager.java:146)
+	at net.minecraft.client.renderer.tileentity.TileEntitySkullRenderer.renderSkull(TileEntitySkullRenderer.java:80)
+	at net.minecraft.client.renderer.tileentity.TileEntityItemStackRenderer.renderByItem(TileEntityItemStackRenderer.java:61)
+	at net.minecraft.client.renderer.entity.RenderItem.renderItem(RenderItem.java:182)
+	at net.minecraft.client.renderer.entity.RenderItem.renderItemIntoGUI(RenderItem.java:487)
+	at net.minecraft.client.renderer.entity.RenderItem.renderItemAndEffectIntoGUI(RenderItem.java:527)
+	at net.minecraft.client.gui.inventory.GuiContainer.drawSlot(GuiContainer.java:268)
+	at net.minecraft.client.gui.inventory.GuiContainer.drawScreen(GuiContainer.java:98)
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1334)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1039)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:354)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+Caused by: java.lang.NullPointerException
+	at com.mojang.authlib.yggdrasil.YggdrasilMinecraftSessionService.getTextures(YggdrasilMinecraftSessionService.java:144)
+	at net.minecraft.client.resources.SkinManager$1.load(SkinManager.java:44)
+	at net.minecraft.client.resources.SkinManager$1.load(SkinManager.java:41)
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3524)
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2317)
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2280)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2195)
+	... 17 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2201)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3934)
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3938)
+	at com.google.common.cache.LocalCache$LocalLoadingCache.get(LocalCache.java:4821)
+	at com.google.common.cache.LocalCache$LocalLoadingCache.getUnchecked(LocalCache.java:4827)
+	at net.minecraft.client.resources.SkinManager.loadSkinFromCache(SkinManager.java:146)
+	at net.minecraft.client.renderer.tileentity.TileEntitySkullRenderer.renderSkull(TileEntitySkullRenderer.java:80)
+	at net.minecraft.client.renderer.tileentity.TileEntityItemStackRenderer.renderByItem(TileEntityItemStackRenderer.java:61)
+	at net.minecraft.client.renderer.entity.RenderItem.renderItem(RenderItem.java:182)
+	at net.minecraft.client.renderer.entity.RenderItem.renderItemIntoGUI(RenderItem.java:487)
+
+-- Item being rendered --
+Details:
+	Item Type: net.minecraft.item.ItemSkull@7bf65e0f
+	Item Aux: 3
+	Item NBT: {SkullOwner:{Id:"f2bff850-4f3e-3826-af1c-e64b08aa9820",Properties:{textures:[0:{Signature:"",Value:""}]},Name:"RomplayHD"},display:{Lore:[0:" §fУбийств: §c0",1:" §fПомощей: §c0",2:"",3:"§a► Телепортироваться"],Name:"§7RomplayHD"}}
+	Item Foil: false
+Stacktrace:
+	at net.minecraft.client.renderer.entity.RenderItem.renderItemAndEffectIntoGUI(RenderItem.java:527)
+	at net.minecraft.client.gui.inventory.GuiContainer.drawSlot(GuiContainer.java:268)
+	at net.minecraft.client.gui.inventory.GuiContainer.drawScreen(GuiContainer.java:98)
+
+-- Screen render details --
+Details:
+	Screen name: net.minecraft.client.gui.inventory.GuiChest
+	Mouse location: Scaled: (480, 269). Absolute: (960, 540)
+	Screen size: Scaled: (960, 540). Absolute: (1920, 1080). Scale factor of 2
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 3 total; [EntityPlayerSP['MEGA_u8rNGf'/9179, l='MpServer', x=0,00, y=124,23, z=0,00], EntityOtherPlayerMP['doloht'/9170, l='MpServer', x=-10,84, y=87,00, z=1,16], EntityOtherPlayerMP['RomplayHD'/9169, l='MpServer', x=0,44, y=82,66, z=-29,47]]
+	Chunk stats: MultiplayerChunkCache: 289, 289
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: 518,00,4,00,7,00 - World: (518,4,7), Chunk: (at 6,0,7 in 32,0; contains blocks 512,0,0 to 527,255,15), Region: (1,0; contains chunks 32,0 to 63,31, blocks 512,0,0 to 1023,255,511)
+	Level time: 524552 game time, 20500 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: adventure (ID 2). Hardcore: false. Cheats: false
+	Forced entities: 26 total; [EntityOtherPlayerMP['Frozii13'/9183, l='MpServer', x=0,00, y=125,00, z=0,00], EntityOtherPlayerMP['BOSSPOMIDOR4'/9182, l='MpServer', x=0,00, y=125,00, z=0,00], EntityOtherPlayerMP['RomplayHD'/9169, l='MpServer', x=0,44, y=82,66, z=-29,47], EntityOtherPlayerMP['doloht'/9170, l='MpServer', x=-10,84, y=87,00, z=1,16], EntityArmorStand['§a2:55'/9243, l='MpServer', x=-11,50, y=86,97, z=0,50], EntityArmorStand['Armour Stand'/9244, l='MpServer', x=-11,50, y=86,72, z=0,50], EntityPlayerSP['MEGA_u8rNGf'/9179, l='MpServer', x=0,00, y=124,23, z=0,00], EntityOtherPlayerMP['Walter'/9168, l='MpServer', x=1,92, y=124,50, z=-0,42], EntityOtherPlayerMP['Gost_32323'/9167, l='MpServer', x=-39,44, y=85,98, z=1,33], EntityOtherPlayerMP['RomplayHD'/9169, l='MpServer', x=0,50, y=90,00, z=-37,50], EntityOtherPlayerMP['doloht'/9170, l='MpServer', x=-10,84, y=87,00, z=1,16], EntityOtherPlayerMP['doloht'/9170, l='MpServer', x=-32,88, y=90,00, z=-15,28], EntityOtherPlayerMP['Shekayo'/9171, l='MpServer', x=2,69, y=124,00, z=11,63], EntityOtherPlayerMP['generaljoskiy'/9175, l='MpServer', x=3,84, y=124,00, z=8,22], EntityOtherPlayerMP['Gost_32323'/9167, l='MpServer', x=-4,59, y=124,41, z=1,44], EntityOtherPlayerMP['semh1'/9180, l='MpServer', x=0,00, y=125,00, z=0,00], EntityOtherPlayerMP['Gost_32323'/9167, l='MpServer', x=-42,09, y=90,00, z=-1,97], EntityOtherPlayerMP['mrpna'/9172, l='MpServer', x=1,43, y=124,71, z=-0,46], EntityOtherPlayerMP['_LiteVape_'/9181, l='MpServer', x=0,19, y=125,50, z=3,34], EntityOtherPlayerMP['HyperiousX'/9173, l='MpServer', x=5,50, y=124,09, z=7,22], EntityOtherPlayerMP['Frozii13'/9176, l='MpServer', x=-2,38, y=124,00, z=1,34], EntityOtherPlayerMP['RomplayHD'/9169, l='MpServer', x=0,44, y=82,66, z=-29,47], EntityOtherPlayerMP['malawka_fan1'/9178, l='MpServer', x=0,41, y=124,00, z=5,13], EntityOtherPlayerMP['Shmele'/9174, l='MpServer', x=0,41, y=125,66, z=-1,78], EntityEnderPearl['entity.ThrownEnderpearl.name'/9259, l='MpServer', x=0,40, y=85,29, z=-5,96], EntityOtherPlayerMP['HyperiousX'/9173, l='MpServer', x=16,44, y=90,00, z=-36,19]]
+	Retry entities: 0 total; []
+	Server brand: NullCordX <- PaperSpigot
+	Server type: Non-integrated multiplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:356)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2574)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:375)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.9
+	Operating System: Windows 8.1 (amd64) version 6.3
+	Java Version: 1.8.0_51, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 400711784 bytes (382 MB) / 1287651328 bytes (1228 MB) up to 3797417984 bytes (3621 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	Launched Version: mcp
+	LWJGL: 2.9.4
+	OpenGL: NVIDIA GeForce GTX 1650/PCIe/SSE2 GL version 4.6.0 NVIDIA 531.79, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: No
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: 6Rengoku_4512x.zip
+	Current Language: English (UK)
+	Profiler Position: N/A (disabled)
+	CPU: 8x Intel(R) Core(TM) i5-9300H CPU @ 2.40GHz
+	OptiFine Version: OptiFine_1.8.9_HD_U_M6_pre2
+	OptiFine Build: ~~NULL~~
+	Render Distance Chunks: 6
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6.0 NVIDIA 531.79
+	OpenGlRenderer: NVIDIA GeForce GTX 1650/PCIe/SSE2
+	OpenGlVendor: NVIDIA Corporation
+	CpuCount: 8

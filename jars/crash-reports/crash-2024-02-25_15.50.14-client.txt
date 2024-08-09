@@ -1,0 +1,83 @@
+---- Minecraft Crash Report ----
+// Don't do that.
+
+Time: 25.02.24 15:50
+Description: Unexpected error
+
+java.lang.NullPointerException: Unexpected error
+	at club.mega.module.impl.combat.TickBase.getExtraTicks(TickBase.java:39)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:947)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:282)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:356)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 16 total; [EntityPlayerSP['Greek_86401'/5069, l='MpServer', x=0,50, y=70,00, z=0,50], EntityOtherPlayerMP['KINV'/2706, l='MpServer', x=0,50, y=70,00, z=0,50], EntityOtherPlayerMP['Dimassd'/4902, l='MpServer', x=0,50, y=70,00, z=0,50], EntityOtherPlayerMP['knocker2'/5032, l='MpServer', x=0,50, y=70,00, z=0,50], EntityOtherPlayerMP['absolute__why'/5034, l='MpServer', x=0,50, y=70,00, z=0,50], EntityOtherPlayerMP['oo123'/4786, l='MpServer', x=0,50, y=70,00, z=0,50], EntityOtherPlayerMP['saveliy5221'/4030, l='MpServer', x=0,50, y=70,00, z=0,50], EntityOtherPlayerMP['artem7654'/4031, l='MpServer', x=0,50, y=70,00, z=0,50], EntityOtherPlayerMP['vosh'/5066, l='MpServer', x=0,50, y=70,00, z=0,50], EntityOtherPlayerMP['asuka_ww'/4465, l='MpServer', x=0,50, y=70,00, z=0,50], EntityOtherPlayerMP['Aledre1774'/5025, l='MpServer', x=-14,94, y=66,50, z=8,41], EntityOtherPlayerMP['edyusha1'/4488, l='MpServer', x=9,69, y=64,00, z=26,78], EntityOtherPlayerMP['§0§r'/65, l='MpServer', x=6,50, y=65,00, z=22,50], EntityOtherPlayerMP['hillzo'/4428, l='MpServer', x=7,31, y=64,00, z=29,72], EntityOtherPlayerMP['cryos678'/4684, l='MpServer', x=7,72, y=64,00, z=29,81], EntityOtherPlayerMP['§8§r'/62, l='MpServer', x=-5,50, y=65,00, z=22,50]]
+	Chunk stats: MultiplayerChunkCache: 121, 121
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: 0,00,70,00,0,00 - World: (0,70,0), Chunk: (at 0,4,0 in 0,0; contains blocks 0,0,0 to 15,255,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 6000 game time, 6000 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: adventure (ID 2). Hardcore: false. Cheats: false
+	Forced entities: 71 total; [EntityArmorStand['§2↶ §a§lＨｙｐｅ§f§lＭＣ§r §2↷'/1, l='MpServer', x=0,50, y=72,72, z=6,50], EntityPlayerSP['Greek_86401'/5069, l='MpServer', x=0,50, y=70,00, z=0,50], EntityArmorStand['Armour Stand'/2, l='MpServer', x=0,50, y=72,47, z=6,50], EntityArmorStand['Выбери сервер выживания:'/3, l='MpServer', x=0,50, y=72,22, z=6,50], EntityArmorStand['§a§lАльфа§r§f, §c§lБета§r§f, §e§lГамма§r§f, §b§lДельта§r'/4, l='MpServer', x=0,50, y=71,97, z=6,50], EntityArmorStand['§4§lГриферский§r §7(гриф поршнями)'/5, l='MpServer', x=0,50, y=71,72, z=6,50], EntityArmorStand['Armour Stand'/6, l='MpServer', x=0,50, y=71,47, z=6,50], EntityArmorStand['Хочешь поиграть на §d§lМини-Играх§r§f?'/7, l='MpServer', x=0,50, y=71,22, z=6,50], EntityArmorStand['Используй §aкомпас §fв инвентаре'/8, l='MpServer', x=0,50, y=70,97, z=6,50], EntityOtherPlayerMP['edyusha1'/4488, l='MpServer', x=9,69, y=64,00, z=26,78], EntityArmorStand['Armour Stand'/9, l='MpServer', x=0,50, y=70,72, z=6,50], EntityArmorStand['Покупка доната на сайте:'/10, l='MpServer', x=0,50, y=70,47, z=6,50], EntityArmorStand['§c§l§nwww.HypeMC.pro§r §e(Скидки §l90§r§e%)'/11, l='MpServer', x=0,50, y=70,22, z=6,50], EntityArmorStand['§e♡ §l§nПривилегии§r §e♡'/12, l='MpServer', x=0,50, y=73,97, z=-7,50], EntityArmorStand['Armour Stand'/13, l='MpServer', x=0,50, y=73,72, z=-7,50], EntityOtherPlayerMP['KINV'/2706, l='MpServer', x=0,50, y=70,00, z=0,50], EntityArmorStand['§2[Премиум] §7- §4§m129§r §f§n10§f руб.'/14, l='MpServer', x=0,50, y=73,47, z=-7,50], EntityOtherPlayerMP['Dimassd'/4902, l='MpServer', x=0,50, y=70,00, z=0,50], EntityArmorStand['§b[Креатив] §7- §4§m249§r §f§n15§f руб.'/15, l='MpServer', x=0,50, y=73,22, z=-7,50], EntityOtherPlayerMP['knocker2'/5032, l='MpServer', x=0,50, y=70,00, z=0,50], EntityArmorStand['§9[Модер] §7- §4§m389§r §f§n29§f руб.'/16, l='MpServer', x=0,50, y=72,97, z=-7,50], EntityOtherPlayerMP['absolute__why'/5034, l='MpServer', x=0,50, y=70,00, z=0,50], EntityArmorStand['§e[Админ] §7- §4§m649§r §f§n49§f руб.'/17, l='MpServer', x=0,50, y=72,72, z=-7,50], EntityOtherPlayerMP['KINV'/2706, l='MpServer', x=0,50, y=70,00, z=0,50], EntityOtherPlayerMP['oo123'/4786, l='MpServer', x=0,50, y=70,00, z=0,50], EntityArmorStand['§6[Лорд] §7- §4§m979§r §f§n69§f руб.'/18, l='MpServer', x=0,50, y=72,47, z=-7,50], EntityOtherPlayerMP['saveliy5221'/4030, l='MpServer', x=0,50, y=70,00, z=0,50], EntityArmorStand['§3[Гл.Админ] §7- §4§m1,499§r §f§n99§f руб.'/19, l='MpServer', x=0,50, y=72,22, z=-7,50], EntityOtherPlayerMP['artem7654'/4031, l='MpServer', x=0,50, y=70,00, z=0,50], EntityArmorStand['§a[Создатель] §7- §4§m1,979§r §f§n149§f руб.'/20, l='MpServer', x=0,50, y=71,97, z=-7,50], EntityOtherPlayerMP['vosh'/5066, l='MpServer', x=0,50, y=70,00, z=0,50], EntityArmorStand['§d[Основатель] §7- §4§m3,479§r §f§n199§f руб.'/21, l='MpServer', x=0,50, y=71,72, z=-7,50], EntityOtherPlayerMP['asuka_ww'/4465, l='MpServer', x=0,50, y=70,00, z=0,50], EntityArmorStand['§c[Владелец] §7- §4§m6,499§r §f§n279§f руб.'/22, l='MpServer', x=0,50, y=71,47, z=-7,50], EntityOtherPlayerMP['Aledre1774'/5025, l='MpServer', x=-14,94, y=66,50, z=8,41], EntityArmorStand['§4[Консоль] §7- §4§m8,749§r §f§n329§f руб.'/23, l='MpServer', x=0,50, y=71,22, z=-7,50], EntityArmorStand['§c[§l§nЦезарь§r§c] §7- §4§m12,479§r §f§n479§f руб.'/24, l='MpServer', x=0,50, y=70,97, z=-7,50], EntityArmorStand['Armour Stand'/25, l='MpServer', x=0,50, y=70,72, z=-7,50], EntityArmorStand['§rВозможности доната - §e/§ldonate'/26, l='MpServer', x=0,50, y=70,47, z=-7,50], EntityArmorStand['§rПокупка на сайте - §c§l§nHypeMC.pro'/27, l='MpServer', x=0,50, y=70,22, z=-7,50], EntityArmorStand['§e§l!!! АКЦИЯ ТОЛЬКО СЕГОДНЯ !!!'/28, l='MpServer', x=0,50, y=66,22, z=22,50], EntityArmorStand['Только §nдля тебя§r §fскидка: §c§l90§r§c%'/29, l='MpServer', x=0,50, y=65,97, z=22,50], EntityArmorStand['Armour Stand'/30, l='MpServer', x=0,50, y=65,72, z=22,50], EntityArmorStand['§c[§lЦЕЗАРЬ§r§c] §f+ §4/§lOP§r §fвсего за §a§l479§r §aрублей'/31, l='MpServer', x=0,50, y=65,47, z=22,50], EntityArmorStand['§c[§lЦЕЗАРЬ§r§c] §f+ §4/§lOP§r §fвсего за §a§l479§r §aрублей'/32, l='MpServer', x=0,50, y=65,22, z=22,50], EntityOtherPlayerMP['Aledre1774'/5025, l='MpServer', x=-14,94, y=66,50, z=8,41], EntityArmorStand['§c[§lЦЕЗАРЬ§r§c] §f+ §4/§lOP§r §fвсего за §a§l479§r §aрублей'/33, l='MpServer', x=0,50, y=64,97, z=22,50], EntityArmorStand['Armour Stand'/34, l='MpServer', x=0,50, y=64,72, z=22,50], EntityArmorStand['Покупка доната на сайте: §e§lwww.hypemc.pro'/35, l='MpServer', x=0,50, y=64,47, z=22,50], EntityArmorStand['Оплатить можно §a§lБЕЗ§r §aкомиссии §7(работает доплата)'/36, l='MpServer', x=0,50, y=64,22, z=22,50], EntityOtherPlayerMP['Dimassd'/4902, l='MpServer', x=0,50, y=70,00, z=0,50], EntityOtherPlayerMP['knocker2'/5032, l='MpServer', x=0,50, y=70,00, z=0,50], EntityOtherPlayerMP['edyusha1'/4488, l='MpServer', x=9,69, y=64,00, z=26,78], EntityOtherPlayerMP['absolute__why'/5034, l='MpServer', x=0,50, y=70,00, z=0,50], EntityOtherPlayerMP['oo123'/4786, l='MpServer', x=0,50, y=70,00, z=0,50], EntityOtherPlayerMP['§0§r'/65, l='MpServer', x=6,50, y=65,00, z=22,50], EntityOtherPlayerMP['hillzo'/4428, l='MpServer', x=7,31, y=64,00, z=29,72], EntityOtherPlayerMP['cryos678'/4684, l='MpServer', x=7,72, y=64,00, z=29,81], EntityOtherPlayerMP['§8§r'/62, l='MpServer', x=-5,50, y=65,00, z=22,50], EntityArmorStand['Бесплатный §c§lДОНАТ'/58, l='MpServer', x=6,50, y=67,03, z=22,50], EntityArmorStand['§aНажми на меня'/59, l='MpServer', x=6,50, y=66,78, z=22,50], EntityArmorStand['Бесплатный §c§lДОНАТ'/60, l='MpServer', x=-5,50, y=67,03, z=22,50], EntityArmorStand['§aНажми на меня'/61, l='MpServer', x=-5,50, y=66,78, z=22,50], EntityOtherPlayerMP['saveliy5221'/4030, l='MpServer', x=0,50, y=70,00, z=0,50], EntityOtherPlayerMP['§8§r'/62, l='MpServer', x=-5,50, y=65,00, z=22,50], EntityOtherPlayerMP['artem7654'/4031, l='MpServer', x=0,50, y=70,00, z=0,50], EntityOtherPlayerMP['§0§r'/65, l='MpServer', x=6,50, y=65,00, z=22,50], EntityOtherPlayerMP['vosh'/5066, l='MpServer', x=0,50, y=70,00, z=0,50], EntityOtherPlayerMP['hillzo'/4428, l='MpServer', x=7,31, y=64,00, z=29,72], EntityOtherPlayerMP['cryos678'/4684, l='MpServer', x=7,72, y=64,00, z=29,81], EntityOtherPlayerMP['asuka_ww'/4465, l='MpServer', x=0,50, y=70,00, z=0,50]]
+	Retry entities: 0 total; []
+	Server brand: NullCordX <- Paper
+	Server type: Non-integrated multiplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:356)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2521)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:311)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.9
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 1.8.0_392, Temurin
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Temurin
+	Memory: 558310672 bytes (532 MB) / 846200832 bytes (807 MB) up to 3797417984 bytes (3621 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	Launched Version: mcp
+	LWJGL: 2.9.4
+	OpenGL: NVIDIA GeForce GTX 1650/PCIe/SSE2 GL version 4.6.0 NVIDIA 546.33, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: WitherArmy.zip
+	Current Language: English (UK)
+	Profiler Position: N/A (disabled)
+	CPU: 8x Intel(R) Core(TM) i5-9300H CPU @ 2.40GHz
+	OptiFine Version: OptiFine_1.8.9_HD_U_M6_pre2
+	OptiFine Build: ~~NULL~~
+	Render Distance Chunks: 8
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6.0 NVIDIA 546.33
+	OpenGlRenderer: NVIDIA GeForce GTX 1650/PCIe/SSE2
+	OpenGlVendor: NVIDIA Corporation
+	CpuCount: 8

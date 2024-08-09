@@ -1,0 +1,90 @@
+---- Minecraft Crash Report ----
+// Hey, that tickles! Hehehe!
+
+Time: 23.05.24 19:26
+Description: Unexpected error
+
+java.util.ConcurrentModificationException
+	at com.google.common.collect.HashBiMap$Itr.checkForConcurrentModification(HashBiMap.java:339)
+	at com.google.common.collect.HashBiMap$Itr.hasNext(HashBiMap.java:345)
+	at net.minecraft.client.audio.SoundManager.updateAllSounds(SoundManager.java:217)
+	at net.minecraft.client.audio.SoundHandler.update(SoundHandler.java:225)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:2022)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:980)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:286)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at com.google.common.collect.HashBiMap$Itr.checkForConcurrentModification(HashBiMap.java:339)
+	at com.google.common.collect.HashBiMap$Itr.hasNext(HashBiMap.java:345)
+	at net.minecraft.client.audio.SoundManager.updateAllSounds(SoundManager.java:217)
+	at net.minecraft.client.audio.SoundHandler.update(SoundHandler.java:225)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['AKaRAn35'/370, l='MpServer', x=-224,52, y=44,00, z=243,89]]
+	Chunk stats: MultiplayerChunkCache: 272, 272
+	Level seed: 0
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: 236,00,64,00,252,00 - World: (236,64,252), Chunk: (at 12,4,12 in 14,15; contains blocks 224,0,240 to 239,255,255), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 68183 game time, 68183 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 43 total; [EntityPigZombie['Zombie Pigman'/384, l='MpServer', x=-315,50, y=73,00, z=296,50], EntityPlayerSP['AKaRAn35'/370, l='MpServer', x=-224,52, y=44,00, z=243,89], EntityPigZombie['Zombie Pigman'/386, l='MpServer', x=-301,78, y=71,00, z=164,81], EntityPigZombie['Zombie Pigman'/387, l='MpServer', x=-297,16, y=42,00, z=217,66], EntityPigZombie['Zombie Pigman'/388, l='MpServer', x=-291,53, y=51,00, z=212,91], EntityPigZombie['Zombie Pigman'/389, l='MpServer', x=-289,50, y=100,00, z=219,88], EntityPigZombie['Zombie Pigman'/390, l='MpServer', x=-291,50, y=42,00, z=225,84], EntityPigZombie['Zombie Pigman'/391, l='MpServer', x=-293,09, y=57,00, z=258,47], EntityPigZombie['Zombie Pigman'/392, l='MpServer', x=-293,50, y=77,00, z=290,50], EntityPigZombie['Zombie Pigman'/395, l='MpServer', x=-287,16, y=40,00, z=211,47], EntityPigZombie['Zombie Pigman'/396, l='MpServer', x=-282,50, y=43,00, z=217,94], EntityPigZombie['Zombie Pigman'/397, l='MpServer', x=-284,50, y=88,00, z=210,50], EntityPigZombie['Zombie Pigman'/398, l='MpServer', x=-285,50, y=88,00, z=212,50], EntityPigZombie['Zombie Pigman'/399, l='MpServer', x=-285,50, y=92,00, z=225,50], EntityPigZombie['Zombie Pigman'/400, l='MpServer', x=-278,50, y=10,00, z=250,50], EntityPigZombie['Zombie Pigman'/401, l='MpServer', x=-272,09, y=19,00, z=261,41], EntityPigZombie['Zombie Pigman'/403, l='MpServer', x=-269,50, y=67,00, z=197,50], EntityPigZombie['Zombie Pigman'/404, l='MpServer', x=-268,50, y=67,00, z=197,50], EntityPigZombie['Zombie Pigman'/405, l='MpServer', x=-267,50, y=67,00, z=200,50], EntityPigZombie['Zombie Pigman'/406, l='MpServer', x=-269,50, y=67,00, z=198,50], EntityPigZombie['Zombie Pigman'/409, l='MpServer', x=-241,13, y=38,00, z=293,63], EntityPigZombie['Zombie Pigman'/410, l='MpServer', x=-226,94, y=64,88, z=224,47], EntityPigZombie['Zombie Pigman'/411, l='MpServer', x=-235,59, y=82,00, z=234,22], EntityPigZombie['Zombie Pigman'/412, l='MpServer', x=-234,50, y=92,00, z=241,50], EntityPigZombie['Zombie Pigman'/413, l='MpServer', x=-212,50, y=97,00, z=243,50], EntityPigZombie['Zombie Pigman'/414, l='MpServer', x=-198,50, y=41,00, z=245,50], EntityPigZombie['Zombie Pigman'/415, l='MpServer', x=-196,50, y=41,00, z=247,34], EntityPigZombie['Zombie Pigman'/416, l='MpServer', x=-204,50, y=82,00, z=258,50], EntityPigZombie['Zombie Pigman'/417, l='MpServer', x=-204,22, y=98,00, z=282,44], EntityPigZombie['Zombie Pigman'/422, l='MpServer', x=-185,50, y=65,88, z=241,50], EntityPigZombie['Zombie Pigman'/423, l='MpServer', x=-190,50, y=65,88, z=242,50], EntityPigZombie['Zombie Pigman'/424, l='MpServer', x=-186,50, y=65,88, z=244,50], EntityPigZombie['Zombie Pigman'/425, l='MpServer', x=-186,50, y=71,00, z=301,50], EntityPigZombie['Zombie Pigman'/426, l='MpServer', x=-185,50, y=71,00, z=300,50], EntityPigZombie['Zombie Pigman'/427, l='MpServer', x=-188,50, y=71,00, z=302,50], EntityPigZombie['Zombie Pigman'/428, l='MpServer', x=-181,50, y=71,00, z=305,50], EntityPigZombie['Zombie Pigman'/439, l='MpServer', x=-261,50, y=78,00, z=294,50], EntityPigZombie['Zombie Pigman'/441, l='MpServer', x=-179,50, y=49,00, z=238,50], EntityPigZombie['Zombie Pigman'/442, l='MpServer', x=-182,50, y=49,00, z=238,50], EntityPigZombie['Zombie Pigman'/379, l='MpServer', x=-333,50, y=58,00, z=248,50], EntityPigZombie['Zombie Pigman'/381, l='MpServer', x=-315,88, y=70,00, z=173,50], EntityPigZombie['Zombie Pigman'/382, l='MpServer', x=-312,50, y=37,00, z=221,50], EntityPigZombie['Zombie Pigman'/383, l='MpServer', x=-314,59, y=58,00, z=223,41]]
+	Retry entities: 0 total; []
+	Server brand: vanilla
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:356)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2550)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:315)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.9
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 1.8.0_392, Temurin
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Temurin
+	Memory: 823172832 bytes (785 MB) / 1680867328 bytes (1603 MB) up to 3797417984 bytes (3621 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 12, tallocated: 94
+	Launched Version: mcp
+	LWJGL: 2.9.4
+	OpenGL: NVIDIA GeForce GTX 1650/PCIe/SSE2 GL version 4.6.0 NVIDIA 546.33, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: Alol.zip
+	Current Language: English (UK)
+	Profiler Position: N/A (disabled)
+	CPU: 8x Intel(R) Core(TM) i5-9300H CPU @ 2.40GHz
+	OptiFine Version: OptiFine_1.8.9_HD_U_M6_pre2
+	OptiFine Build: ~~NULL~~
+	Render Distance Chunks: 8
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6.0 NVIDIA 546.33
+	OpenGlRenderer: NVIDIA GeForce GTX 1650/PCIe/SSE2
+	OpenGlVendor: NVIDIA Corporation
+	CpuCount: 8

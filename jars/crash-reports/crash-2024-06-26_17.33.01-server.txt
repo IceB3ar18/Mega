@@ -1,0 +1,124 @@
+---- Minecraft Crash Report ----
+// Surprise! Haha. Well, this is awkward.
+
+Time: 26.06.24 17:33
+Description: Ticking entity
+
+java.util.ConcurrentModificationException
+	at java.util.ArrayList$ArrayListSpliterator.tryAdvance(ArrayList.java:1363)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:531)
+	at club.mega.module.ModuleManager.getModule(ModuleManager.java:128)
+	at club.mega.module.impl.visual.Animations.getInstance(Animations.java:19)
+	at net.minecraft.entity.EntityLivingBase.getArmSwingAnimationEnd(EntityLivingBase.java:1125)
+	at net.minecraft.entity.EntityLivingBase.updateArmSwingProgress(EntityLivingBase.java:1185)
+	at net.minecraft.entity.monster.EntityMob.onLivingUpdate(EntityMob.java:25)
+	at net.minecraft.entity.monster.EntityZombie.onLivingUpdate(EntityZombie.java:216)
+	at net.minecraft.entity.EntityLivingBase.onUpdate(EntityLivingBase.java:1582)
+	at net.minecraft.entity.EntityLiving.onUpdate(EntityLiving.java:237)
+	at net.minecraft.entity.monster.EntityMob.onUpdate(EntityMob.java:38)
+	at net.minecraft.entity.monster.EntityZombie.onUpdate(EntityZombie.java:281)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:1689)
+	at net.minecraft.world.WorldServer.updateEntityWithOptionalForce(WorldServer.java:672)
+	at net.minecraft.world.World.updateEntity(World.java:1662)
+	at net.minecraft.world.World.updateEntities(World.java:1517)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:520)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:689)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:599)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:264)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:487)
+	at java.lang.Thread.run(Thread.java:750)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at java.util.ArrayList$ArrayListSpliterator.tryAdvance(ArrayList.java:1363)
+	at java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:126)
+	at java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:499)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:486)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:152)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:531)
+	at club.mega.module.ModuleManager.getModule(ModuleManager.java:128)
+	at club.mega.module.impl.visual.Animations.getInstance(Animations.java:19)
+	at net.minecraft.entity.EntityLivingBase.getArmSwingAnimationEnd(EntityLivingBase.java:1125)
+	at net.minecraft.entity.EntityLivingBase.updateArmSwingProgress(EntityLivingBase.java:1185)
+	at net.minecraft.entity.monster.EntityMob.onLivingUpdate(EntityMob.java:25)
+	at net.minecraft.entity.monster.EntityZombie.onLivingUpdate(EntityZombie.java:216)
+	at net.minecraft.entity.EntityLivingBase.onUpdate(EntityLivingBase.java:1582)
+	at net.minecraft.entity.EntityLiving.onUpdate(EntityLiving.java:237)
+	at net.minecraft.entity.monster.EntityMob.onUpdate(EntityMob.java:38)
+	at net.minecraft.entity.monster.EntityZombie.onUpdate(EntityZombie.java:281)
+	at net.minecraft.world.World.updateEntityWithOptionalForce(World.java:1689)
+	at net.minecraft.world.WorldServer.updateEntityWithOptionalForce(WorldServer.java:672)
+	at net.minecraft.world.World.updateEntity(World.java:1662)
+
+-- Entity being ticked --
+Details:
+	Entity Type: Zombie (net.minecraft.entity.monster.EntityZombie)
+	Entity ID: 304
+	Entity Name: Zombie
+	Entity's Exact location: -885,61, 22,00, 1909,90
+	Entity's Block location: -886,00,22,00,1909,00 - World: (-886,22,1909), Chunk: (at 10,1,5 in -56,119; contains blocks -896,0,1904 to -881,255,1919), Region: (-2,3; contains chunks -64,96 to -33,127, blocks -1024,0,1536 to -513,255,2047)
+	Entity's Momentum: 0,00, -0,08, 0,00
+	Entity's Rider: ~~ERROR~~ NullPointerException: null
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at net.minecraft.world.World.updateEntities(World.java:1517)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:520)
+
+-- Affected level --
+Details:
+	Level name: New World
+	All players: 1 total; [EntityPlayerMP['Player484'/269, l='New World', x=-786,19, y=63,48, z=1879,46]]
+	Chunk stats: ServerChunkCache: 652 Drop: 0
+	Level seed: -5050745979905813664
+	Level generator: ID 00 - default, ver 1. Features enabled: true
+	Level generator options: 
+	Level spawn location: 236,00,64,00,252,00 - World: (236,64,252), Chunk: (at 12,4,12 in 14,15; contains blocks 224,0,240 to 239,255,255), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 175092 game time, 175092 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 130457 (now: false), thunder time: 75487 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:689)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:599)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:264)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:487)
+	at java.lang.Thread.run(Thread.java:750)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.9
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 1.8.0_392, Temurin
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Temurin
+	Memory: 360194744 bytes (343 MB) / 1670905856 bytes (1593 MB) up to 3797417984 bytes (3621 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 12, tallocated: 94
+	Profiler Position: N/A (disabled)
+	Player Count: 1 / 8; [EntityPlayerMP['Player484'/269, l='New World', x=-786,19, y=63,48, z=1879,46]]
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Very likely; Jar signature invalidated
+	OptiFine Version: OptiFine_1.8.9_HD_U_M6_pre2
+	OptiFine Build: ~~NULL~~
+	Render Distance Chunks: 8
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6.0 NVIDIA 546.33
+	OpenGlRenderer: NVIDIA GeForce GTX 1650/PCIe/SSE2
+	OpenGlVendor: NVIDIA Corporation
+	CpuCount: 8

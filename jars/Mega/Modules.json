@@ -1,0 +1,850 @@
+{
+  "KillAura": {
+    "Toggled": false,
+    "Key": 19,
+    "Setting": {
+      "Mode": "Single",
+      "Switch delay": 300.0,
+      "Priority": "Health",
+      "Attack mode": "Click",
+      "Attack on": "Legit",
+      "Pre Range": 0.5,
+      "Randomize pre Range": true,
+      "Range": 3.2,
+      "SmoothRotations": true,
+      "CalcRotSpeed": false,
+      "YawSpeed": {
+        "min": 166.0,
+        "max": 178.0
+      },
+      "PitchSpeed": {
+        "min": 146.0,
+        "max": 166.0
+      },
+      "BestHitVec": true,
+      "Inaccuracy": 19.0,
+      "A3Fix": true,
+      "MouseFix": true,
+      "Predict": true,
+      "Heuristics": true,
+      "Randomize range": true,
+      "Min APS": 845.0,
+      "Max APS": 945.0,
+      "PerfectHit": true,
+      "PHChance": 80.0,
+      "Auto. block": false,
+      "Block range": 4.0,
+      "Block chance": 20.0,
+      "Min unblock ticks": 8.0,
+      "Max unblock ticks": 13.0,
+      "Fake block": true,
+      "Pre swing": true,
+      "MoveFix": true,
+      "SilentMoveFix": true,
+      "VelocityFix": true,
+      "Keep sprint": false,
+      "Shop": false,
+      "Disable on death": true,
+      "Attack death": false,
+      "Players": true,
+      "Mobs": true,
+      "Villagers": false,
+      "LockView": false,
+      "LookESP": true
+    }
+  },
+  "Criticals": {
+    "Toggled": false,
+    "Key": 0,
+    "Setting": {
+      "Mode": "Packet"
+    }
+  },
+  "Velocity": {
+    "Toggled": false,
+    "Key": 47,
+    "Setting": {
+      "Mode": "Intave",
+      "XZVelocity": 0.6,
+      "YVelocity": 20.0,
+      "XZIntave": 1.0,
+      "Jump": true,
+      "Explosion": true,
+      "Push": 6.4,
+      "PushStart": 9.0,
+      "PushEnd": 2.0,
+      "ReverseStart": 9.0,
+      "TickZero": 4.0,
+      "TickZeroY": false,
+      "ReverseStrafe": false,
+      "OnGround": false,
+      "HitBug": false
+    }
+  },
+  "BackTrack": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {
+      "MaxHitRange": 6.0,
+      "Delay": 500.0,
+      "OnlyWhenNeed": true,
+      "Esp": true,
+      "Color": "#FFF60A0A",
+      "CancelVelocity": true,
+      "CancelKeepAlive": true,
+      "CancelTimeUpdate": true
+    }
+  },
+  "STap": {
+    "Toggled": false,
+    "Key": 0,
+    "Setting": {}
+  },
+  "WTap": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {}
+  },
+  "TickBase": {
+    "Toggled": false,
+    "Key": 45,
+    "Setting": {
+      "Range": 3.5,
+      "Ticks": 2.0,
+      "Mode": "Past"
+    }
+  },
+  "AutoGApple": {
+    "Toggled": false,
+    "Key": 0,
+    "Setting": {
+      "Health": 15.0,
+      "Delay": 650.0,
+      "Item spoof": true
+    }
+  },
+  "AutoRod": {
+    "Toggled": false,
+    "Key": 0,
+    "Setting": {
+      "Range": {
+        "min": 2.0,
+        "max": 6.800000000000001
+      },
+      "Delay": {
+        "min": 90.0,
+        "max": 390.0
+      },
+      "NextRod": 1275.0,
+      "ResetSlot": true
+    }
+  },
+  "AutoClicker": {
+    "Toggled": false,
+    "Key": 0,
+    "Setting": {
+      "Max APS": 14.0,
+      "Min APS": 12.0
+    }
+  },
+  "AntiBot": {
+    "Toggled": false,
+    "Key": 0,
+    "Setting": {
+      "Mode": "Matrix"
+    }
+  },
+  "RotationHandler": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {
+      "YawSpeed": {
+        "min": 26.0,
+        "max": 64.0
+      },
+      "PitchSpeed": {
+        "min": 12.0,
+        "max": 42.0
+      },
+      "MoveFix": true,
+      "SilentMoveFix": true
+    }
+  },
+  "NoFall": {
+    "Toggled": false,
+    "Key": 0,
+    "Setting": {
+      "Mode": "Legit",
+      "MinFallDist": 5.0,
+      "AimRange": 8.0,
+      "YawSpeed": {
+        "min": 22.0,
+        "max": 62.0
+      },
+      "PitchSpeed": {
+        "min": 14.0,
+        "max": 58.0
+      },
+      "Delay": {
+        "min": 0.0,
+        "max": 160.0
+      }
+    }
+  },
+  "NoRotate": {
+    "Toggled": false,
+    "Key": 0,
+    "Setting": {}
+  },
+  "AutoRespawn": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {}
+  },
+  "Scaffold": {
+    "Toggled": false,
+    "Key": 34,
+    "Setting": {
+      "Mode": "Normal",
+      "YawSpeed": {
+        "min": 55.0,
+        "max": 130.0
+      },
+      "PitchSpeed": {
+        "min": 8.0,
+        "max": 38.0
+      },
+      "Backup": 0.0,
+      "SpamClick": true,
+      "IntaveHit": true,
+      "ClickDelay": 200.0,
+      "MoveFix": true,
+      "SilentMoveFix": true,
+      "SameY": false,
+      "Breezly": true,
+      "AutoJump": true,
+      "Jump Delay": 8.0,
+      "NoSwing": true,
+      "Predict": true,
+      "Sprint": false,
+      "LegitSneak": false,
+      "Tower": "None",
+      "TowerMove": false,
+      "SilentMode": "Spoof",
+      "Block Count": "Augustus"
+    }
+  },
+  "Disabler": {
+    "Toggled": false,
+    "Key": 0,
+    "Setting": {
+      "PingSpoof": false,
+      "RoyalPixels": false,
+      "MinemenStrafe": false,
+      "UniversoCraft": false,
+      "Spectate": false,
+      "C00PacketKeepAlive": false,
+      "C01PacketPing": false,
+      "C0BPacketEntityAction": false,
+      "PingSpooC13PacketPlayerAbilitiesf": false,
+      "C0FPacketConfirmTransaction": false,
+      "NCPTimerSemi": false,
+      "HAC": false,
+      "NoSprint": false,
+      "BLC-Spoof": false,
+      "AAC5": false,
+      "NoFlag": false,
+      "FrequencyFull": false,
+      "Debug": false,
+      "Delay": 1000.0
+    }
+  },
+  "Range": {
+    "Toggled": false,
+    "Key": 0,
+    "Setting": {
+      "Range": 3.0
+    }
+  },
+  "BetterHits": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {}
+  },
+  "ChestStealer": {
+    "Toggled": false,
+    "Key": 48,
+    "Setting": {
+      "Sorting": "Nearest",
+      "Mode": "Normal",
+      "Delay": {
+        "min": 0.0,
+        "max": 10.0
+      },
+      "Mouse Speed": {
+        "min": 6.0,
+        "max": 13.0
+      },
+      "Click Empty Slot Chance": 1.0,
+      "FreeLook": false,
+      "Intelligent": true,
+      "Start Delay": {
+        "min": 705.0,
+        "max": 935.0
+      },
+      "Close": true,
+      "Close Delay": {
+        "min": 20.0,
+        "max": 70.0
+      }
+    }
+  },
+  "AutoArmor": {
+    "Toggled": false,
+    "Key": 48,
+    "Setting": {
+      "Mode": "OpenInv",
+      "StartDelay": 200.0,
+      "Delay": {
+        "min": 49.0,
+        "max": 165.0
+      },
+      "Hotbar": true,
+      "GommeQSG": true,
+      "NoMove": false,
+      "HStartDelay": 200.0,
+      "HotbarDelay": 100.0
+    }
+  },
+  "InvCleaner": {
+    "Toggled": false,
+    "Key": 48,
+    "Setting": {
+      "Mode": "OpenInv",
+      "CleanMode": "Clean",
+      "NoMove": true,
+      "ClickMode": "Normal",
+      "Delay": {
+        "min": 1.0,
+        "max": 21.0
+      },
+      "StartDelay": {
+        "min": 925.0,
+        "max": 995.0
+      },
+      "FailClicks": false,
+      "FailChance": 4.0,
+      "Sort": true
+    }
+  },
+  "FastPlace": {
+    "Toggled": false,
+    "Key": 0,
+    "Setting": {
+      "Max APS": 14.0,
+      "Min APS": 12.0
+    }
+  },
+  "Bedfucker": {
+    "Toggled": true,
+    "Key": 21,
+    "Setting": {
+      "Block": "Bed",
+      "Action": "Break",
+      "ThroughWall": true,
+      "Instant": true,
+      "MoveFix": true,
+      "FriendMyBlock": true,
+      "CustomID": 26.0,
+      "YawSpeed": 180.0,
+      "PitchSpeed": 180.0,
+      "Delay": 500.0,
+      "Range": 4.5
+    }
+  },
+  "MCF": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {}
+  },
+  "Regen": {
+    "Toggled": false,
+    "Key": 0,
+    "Setting": {
+      "Packets": 200.0
+    }
+  },
+  "ChestAura": {
+    "Toggled": false,
+    "Key": 0,
+    "Setting": {
+      "MoveFix": true,
+      "YawSpeed": 180.0,
+      "PitchSpeed": 180.0,
+      "Delay": 500.0,
+      "Range": 4.5
+    }
+  },
+  "Sprint": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {}
+  },
+  "Speed": {
+    "Toggled": false,
+    "Key": 35,
+    "Setting": {
+      "Mode": "LegitHop",
+      "Speed": 10.0,
+      "Height": 0.2,
+      "DMGSpeed": 1.0,
+      "DamageBoost": false,
+      "Strafe": false
+    }
+  },
+  "Flight": {
+    "Toggled": false,
+    "Key": 33,
+    "Setting": {
+      "Mode": "Intave12",
+      "AutoJump": true,
+      "OnGroundPacket": true,
+      "Speed": 4.5,
+      "VerusSpeed": 1.3,
+      "DisableOnWorld": false
+    }
+  },
+  "Step": {
+    "Toggled": false,
+    "Key": 0,
+    "Setting": {
+      "Height": 1.0
+    }
+  },
+  "InvMove": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {
+      "ClickGui only": true
+    }
+  },
+  "NoSlow": {
+    "Toggled": false,
+    "Key": 0,
+    "Setting": {
+      "StartSlow": false,
+      "Slowdown": true,
+      "Sprint": true,
+      "Switch": false,
+      "Toggle": true,
+      "Bug": false,
+      "Timer": false,
+      "Forward": 1.0,
+      "Strafe": 1.0,
+      "TimerSpeed": 1.0
+    }
+  },
+  "No Jump Delay": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {
+      "KillAuraDisable": false
+    }
+  },
+  "Timer": {
+    "Toggled": false,
+    "Key": 0,
+    "Setting": {
+      "Speed": 1.0
+    }
+  },
+  "AntiVoid": {
+    "Toggled": false,
+    "Key": 0,
+    "Setting": {
+      "Mode": "Watchdog"
+    }
+  },
+  "V-Clip": {
+    "Toggled": false,
+    "Key": 0,
+    "Setting": {}
+  },
+  "AutoTool": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {
+      "Item spoof": true
+    }
+  },
+  "Strafe": {
+    "Toggled": false,
+    "Key": 0,
+    "Setting": {
+      "Mode": "Normal",
+      "WhileKB": false,
+      "OnlyOnGround": false
+    }
+  },
+  "ESP": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {
+      "Shader": false,
+      "Shader Radius": 4.0,
+      "Exposure": 3.0,
+      "Seperate Texture": true,
+      "Shader Mode": "Fade",
+      "Fade Speed": 15.0,
+      "Shader Color": "#FF00EEFF",
+      "Shader Start": "#FFFBFF0E",
+      "Shader End": "#FFF20EF2",
+      "Boxy": false,
+      "Boxy Mode": "Normal",
+      "Boxy Color": "#31F4F3F6",
+      "Boxy Start": "#49F9FF0A",
+      "Boxy End": "#49FF0AF1",
+      "LineWidth": 0.0,
+      "Fake Corner": true,
+      "Corner Mode": "Normal",
+      "Corner Color": "#FF00A8FF",
+      "Corner Start": "#FFFF02E5",
+      "Corner End": "#FFF8FF02",
+      "Player": true,
+      "Mob": false,
+      "Animal": true,
+      "Villager": false,
+      "ArmorStand": false,
+      "Invisible": true
+    }
+  },
+  "ItemESP": {
+    "Toggled": false,
+    "Key": 0,
+    "Setting": {
+      "Shader": true,
+      "Shader Radius": 4.0,
+      "Exposure": 2.2,
+      "Seperate Texture": false,
+      "Shader Mode": "Normal",
+      "Fade Speed": 15.0,
+      "Shader Color": "#FFFFFFFF",
+      "Shader Start": "#FFFFFFFF",
+      "Shader End": "#FFFFFFFF",
+      "Boxy": false,
+      "Boxy Color": "#99FFFFFF",
+      "Boxy Outline": false
+    }
+  },
+  "ChestESP": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {
+      "Shader": true,
+      "Glow Radius": 4.0,
+      "Exposure": 1.7000000000000002,
+      "Seperate Texture": true,
+      "Glow Mode": "Normal",
+      "Fade Speed": 15.0,
+      "Glow Color": "#FF14FF8E",
+      "Glow Start": "#FF850BFF",
+      "Glow Mid": "#FFFF01F6",
+      "Boxy": false,
+      "Color Mode": "Normal",
+      "Color": "#3A00FF85",
+      "Start Color": "#4903FF77",
+      "End Color": "#4DECFFFB",
+      "Outline": 0.0
+    }
+  },
+  "NoFov": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {}
+  },
+  "NoHurtCam": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {}
+  },
+  "Ambiance": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {
+      "Time": 7000.0
+    }
+  },
+  "Animations": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {
+      "Mode": "Mega",
+      "Swing slowness": 7.0,
+      "EquipProgress": true,
+      "Progress Multiplier": 1.9500000000000002
+    }
+  },
+  "NoBob": {
+    "Toggled": false,
+    "Key": 0,
+    "Setting": {}
+  },
+  "NameProtect": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {}
+  },
+  "TargetESP": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {
+      "Spiral": false,
+      "Color Mode": "Fade",
+      "Spiral Color": "#CB00BBFF",
+      "Spiral Color 1": "#CB00FF6F",
+      "Spiral Color 2": "#C500EAFF",
+      "Coils": 3.0,
+      "Speed": 4.0,
+      "Height": 1.8,
+      "Width": 1.6,
+      "Sigma": true,
+      "Sigma Mode": "Normal",
+      "Sigma Color": "#FF0085FF",
+      "Sigma Color 1": "#7D098EFD",
+      "Sigma Color 2": "#79FFF0F0",
+      "Line": false,
+      "Sigma Hurttime": true
+    }
+  },
+  "Scoreboard": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {
+      "Blur": true,
+      "Rounded": true,
+      "Radius": 2.0,
+      "Color Mode": "Normal",
+      "Fade Speed": 15.0,
+      "Color": "#44020206",
+      "Third Color": false,
+      "Start Color": "#3503AAFF",
+      "Mid Color": "#4900EAFF",
+      "End Color": "#2EF0FFFF",
+      "Side": "Right"
+    }
+  },
+  "Hotbar": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {
+      "Blur": true,
+      "Rounded": true,
+      "Radius": 5.0,
+      "Color Mode": "Normal",
+      "Fade Speed": 15.0,
+      "Color": "#930E0E0E",
+      "Third Color": true,
+      "Start Color": "#4900BBFF",
+      "Mid Color": "#4900EAFF",
+      "End Color": "#4900FFC4",
+      "SelectionColor": "#76FCF5F5"
+    }
+  },
+  "Nametags": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {
+      "Own Nametag": true
+    }
+  },
+  "TNTRange": {
+    "Toggled": false,
+    "Key": 0,
+    "Setting": {
+      "Color": "#FFFF0000"
+    }
+  },
+  "BlockOverlay": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {
+      "Outline": 4.0,
+      "Color": "#65FC0707"
+    }
+  },
+  "Trajectories": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {
+      "Line Color": "#C3FFFFFF",
+      "Final Color": "#4F0DA2FF",
+      "lineWidth": 5.0
+    }
+  },
+  "CustomSkin": {
+    "Toggled": false,
+    "Key": 0,
+    "Setting": {
+      "Name": "G0mme"
+    }
+  },
+  "Chat": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {
+      "Shadow": true,
+      "Color": "#FFD92929"
+    }
+  },
+  "AttackEffects": {
+    "Toggled": false,
+    "Key": 0,
+    "Setting": {}
+  },
+  "ItemPhysics": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {}
+  },
+  "Projectiles": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {
+      "Color": "#FF1579E6",
+      "CalculateColor": true,
+      "LineWidth": 6.0
+    }
+  },
+  "Blur": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {
+      "Blur": true,
+      "Mode": "Gaussian",
+      "Blur Radius": 17.0,
+      "Blur Iterations": 15.0,
+      "Blur Offset": 2.0,
+      "Shadow": true,
+      "Shadow Radius": 5.0,
+      "Shadow Offset": 2.0
+    }
+  },
+  "Rotation": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {}
+  },
+  "CustomItemPos": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {
+      "X": 0.66,
+      "Y": 0.01,
+      "Z": -0.67,
+      "BlockX": 0.01,
+      "BlockY": 0.04,
+      "BlockZ": 0.0,
+      "Scale": 0.99
+    }
+  },
+  "Friends": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {}
+  },
+  "AntiCheat": {
+    "Toggled": false,
+    "Key": 0,
+    "Setting": {
+      "AlertChat": false
+    }
+  },
+  "Discord": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {}
+  },
+  "AutoRegister": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {
+      "Password": "Pass1234"
+    }
+  },
+  "StaffDetector": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {
+      "Mode": "HypeMC"
+    }
+  },
+  "WaterMark": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {
+      "Text": "Text"
+    }
+  },
+  "ModuleList": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {
+      "Font": "Arial",
+      "Name Color": "Fade",
+      "Fade Speed": 0.6,
+      "Color": "#FFFFFFFF",
+      "Third Color": true,
+      "Start Color": "#FFFF1100",
+      "Mid Color": "#FF4E03FC",
+      "End Color": "#FF00EEFF",
+      "Font Size": 19.0,
+      "Height": 10.0,
+      "BGColor": "#46000000",
+      "VerticalOff": 10.0,
+      "HorizontalOff": 10.0,
+      "Blur": true
+    }
+  },
+  "ClickGui": {
+    "Toggled": false,
+    "Key": 54,
+    "Setting": {
+      "Mode": "Augustus",
+      "Animation speed": 5.4,
+      "Color": "#FF0AA9F6",
+      "Blur": true,
+      "Debug": false
+    }
+  },
+  "TargetHud": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {
+      "Blur": true,
+      "Background Color": "#82080808",
+      "Health Color": "#FFF7EE18"
+    }
+  },
+  "Shadow": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {
+      "Shadow Radius": 4.0,
+      "Exposure": 2.2,
+      "Shadow Mode": "Normal",
+      "Fade Speed": 15.0,
+      "Shadow Color": "#FF000000",
+      "Third Color": true,
+      "shadow Start": "#FF000000",
+      "Shadow Mid": "#FF000000",
+      "Shadow End": "#FF000000"
+    }
+  },
+  "Sounds": {
+    "Toggled": true,
+    "Key": 0,
+    "Setting": {
+      "Mode": "Sigma"
+    }
+  }
+}

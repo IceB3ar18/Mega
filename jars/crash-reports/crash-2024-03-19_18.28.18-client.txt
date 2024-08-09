@@ -1,0 +1,86 @@
+---- Minecraft Crash Report ----
+// There are four lights!
+
+Time: 19.03.24 18:28
+Description: Unexpected error
+
+java.lang.NullPointerException: Unexpected error
+	at club.mega.util.AuraUtil.isValid(AuraUtil.java:110)
+	at club.mega.module.impl.combat.TickBase.findTarget(TickBase.java:73)
+	at club.mega.module.impl.combat.TickBase.getExtraTicks(TickBase.java:34)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:947)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:282)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at club.mega.util.AuraUtil.isValid(AuraUtil.java:110)
+	at club.mega.module.impl.combat.TickBase.findTarget(TickBase.java:73)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 11 total; [EntityPlayerSP['Greek_04289'/53268, l='MpServer', x=-20,50, y=76,00, z=43,50], EntityOtherPlayerMP['samirt'/53270, l='MpServer', x=-50,19, y=73,00, z=-0,13], EntityOtherPlayerMP['bioshock'/53271, l='MpServer', x=42,38, y=76,00, z=23,31], EntityOtherPlayerMP['BIACK_W1THE'/53272, l='MpServer', x=1,16, y=73,00, z=-51,03], EntityOtherPlayerMP['ssmtablite'/53274, l='MpServer', x=-22,28, y=71,97, z=-43,16], EntityOtherPlayerMP['KBA_KBA879'/53275, l='MpServer', x=50,97, y=76,00, z=-1,47], EntityOtherPlayerMP['pupkin23'/53276, l='MpServer', x=21,38, y=68,69, z=-36,72], EntityOtherPlayerMP['Rip_fully'/53277, l='MpServer', x=-41,66, y=72,00, z=-22,38], EntityOtherPlayerMP['Smert666'/53278, l='MpServer', x=-42,69, y=72,00, z=23,19], EntityOtherPlayerMP['Sashsa_Geem'/53279, l='MpServer', x=22,34, y=73,50, z=46,88], EntityOtherPlayerMP['hipper090'/53280, l='MpServer', x=2,25, y=72,00, z=51,50]]
+	Chunk stats: MultiplayerChunkCache: 289, 289
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: 518,00,4,00,7,00 - World: (518,4,7), Chunk: (at 6,0,7 in 32,0; contains blocks 512,0,0 to 527,255,15), Region: (1,0; contains chunks 32,0 to 63,31, blocks 512,0,0 to 1023,255,511)
+	Level time: 20500 game time, 20500 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 40 total; [EntityArmorStand['§a2:51'/53316, l='MpServer', x=-45,50, y=72,97, z=23,50], EntityArmorStand['§cПустой'/53317, l='MpServer', x=-45,50, y=72,72, z=23,50], EntityPlayerSP['Greek_04289'/53268, l='MpServer', x=-20,50, y=76,00, z=43,50], EntityOtherPlayerMP['ssmtablite'/53269, l='MpServer', x=0,69, y=124,00, z=4,09], EntityOtherPlayerMP['samirt'/53270, l='MpServer', x=-50,19, y=73,00, z=-0,13], EntityArmorStand['§a2:58'/53327, l='MpServer', x=3,50, y=72,97, z=49,50], EntityOtherPlayerMP['bioshock'/53271, l='MpServer', x=42,38, y=76,00, z=23,31], EntityArmorStand['Armour Stand'/53328, l='MpServer', x=3,50, y=72,72, z=49,50], EntityOtherPlayerMP['BIACK_W1THE'/53272, l='MpServer', x=1,16, y=73,00, z=-51,03], EntityOtherPlayerMP['Ignata'/53273, l='MpServer', x=0,00, y=125,00, z=0,02], EntityOtherPlayerMP['ssmtablite'/53274, l='MpServer', x=-22,28, y=71,97, z=-43,16], EntityOtherPlayerMP['KBA_KBA879'/53275, l='MpServer', x=50,97, y=76,00, z=-1,47], EntityOtherPlayerMP['pupkin23'/53276, l='MpServer', x=21,38, y=68,69, z=-36,72], EntityArmorStand['§a2:59'/53333, l='MpServer', x=-22,50, y=76,97, z=41,50], EntityOtherPlayerMP['samirt'/53270, l='MpServer', x=-50,19, y=73,00, z=-0,13], EntityOtherPlayerMP['Rip_fully'/53277, l='MpServer', x=-41,66, y=72,00, z=-22,38], EntityArmorStand['Armour Stand'/53334, l='MpServer', x=-22,50, y=76,72, z=41,50], EntityOtherPlayerMP['bioshock'/53271, l='MpServer', x=42,38, y=76,00, z=23,31], EntityOtherPlayerMP['Smert666'/53278, l='MpServer', x=-42,69, y=72,00, z=23,19], EntityArmorStand['§a2:59'/53335, l='MpServer', x=-40,50, y=72,97, z=23,50], EntityOtherPlayerMP['BIACK_W1THE'/53272, l='MpServer', x=1,16, y=73,00, z=-51,03], EntityOtherPlayerMP['Sashsa_Geem'/53279, l='MpServer', x=22,34, y=73,50, z=46,88], EntityArmorStand['Armour Stand'/53336, l='MpServer', x=-40,50, y=72,72, z=23,50], EntityOtherPlayerMP['hipper090'/53280, l='MpServer', x=2,25, y=72,00, z=51,50], EntityItem['item.item.egg'/53337, l='MpServer', x=-20,50, y=77,31, z=43,50], EntityOtherPlayerMP['ssmtablite'/53274, l='MpServer', x=-22,28, y=71,97, z=-43,16], EntityOtherPlayerMP['suigetsu2i'/53281, l='MpServer', x=0,00, y=125,00, z=0,00], EntityOtherPlayerMP['KBA_KBA879'/53275, l='MpServer', x=50,97, y=76,00, z=-1,47], EntityOtherPlayerMP['Bo_lox'/53282, l='MpServer', x=0,28, y=124,17, z=3,90], EntityOtherPlayerMP['pupkin23'/53276, l='MpServer', x=21,38, y=68,69, z=-36,72], EntityOtherPlayerMP['Rip_fully'/53277, l='MpServer', x=-41,66, y=72,00, z=-22,38], EntityOtherPlayerMP['Smert666'/53278, l='MpServer', x=-42,69, y=72,00, z=23,19], EntityOtherPlayerMP['Sashsa_Geem'/53279, l='MpServer', x=22,34, y=73,50, z=46,88], EntityOtherPlayerMP['hipper090'/53280, l='MpServer', x=2,25, y=72,00, z=51,50], EntityArmorStand['§a2:44'/53287, l='MpServer', x=3,50, y=76,97, z=48,50], EntityArmorStand['Armour Stand'/53288, l='MpServer', x=3,50, y=76,72, z=48,50], EntityArmorStand['§a2:45'/53297, l='MpServer', x=-40,50, y=76,97, z=23,50], EntityArmorStand['§cПустой'/53298, l='MpServer', x=-40,50, y=76,72, z=23,50], EntityArmorStand['§a2:50'/53306, l='MpServer', x=-0,50, y=72,97, z=52,50], EntityArmorStand['Armour Stand'/53307, l='MpServer', x=-0,50, y=72,72, z=52,50]]
+	Retry entities: 0 total; []
+	Server brand: NullCordX <- PaperSpigot
+	Server type: Non-integrated multiplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:356)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2524)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:311)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.9
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 1.8.0_392, Temurin
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Temurin
+	Memory: 850911512 bytes (811 MB) / 1356333056 bytes (1293 MB) up to 3797417984 bytes (3621 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 12, tallocated: 94
+	Launched Version: mcp
+	LWJGL: 2.9.4
+	OpenGL: NVIDIA GeForce GTX 1650/PCIe/SSE2 GL version 4.6.0 NVIDIA 546.33, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: WitherArmy.zip
+	Current Language: English (UK)
+	Profiler Position: N/A (disabled)
+	CPU: 8x Intel(R) Core(TM) i5-9300H CPU @ 2.40GHz
+	OptiFine Version: OptiFine_1.8.9_HD_U_M6_pre2
+	OptiFine Build: ~~NULL~~
+	Render Distance Chunks: 8
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6.0 NVIDIA 546.33
+	OpenGlRenderer: NVIDIA GeForce GTX 1650/PCIe/SSE2
+	OpenGlVendor: NVIDIA Corporation
+	CpuCount: 8

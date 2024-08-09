@@ -1,0 +1,78 @@
+---- Minecraft Crash Report ----
+// My bad.
+
+Time: 21.03.24 19:43
+Description: Unexpected error
+
+java.lang.NullPointerException: Unexpected error
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:356)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 10 total; [EntityPlayerSP['Hase_9675'/9922, l='MpServer', x=41,02, y=45,00, z=20,27], EntityOtherPlayerMP['james_2323'/9921, l='MpServer', x=6,06, y=50,91, z=-0,13], EntityOtherPlayerMP['karinanotstupid'/9923, l='MpServer', x=3,49, y=49,04, z=-44,62], EntityOtherPlayerMP['GoldApel'/9924, l='MpServer', x=-0,39, y=49,00, z=-46,97], EntityOtherPlayerMP['dima666'/9925, l='MpServer', x=-14,20, y=50,00, z=-42,65], EntityOtherPlayerMP['LiPrIk32'/9929, l='MpServer', x=-0,31, y=46,44, z=48,99], EntityOtherPlayerMP['Sprinp'/9930, l='MpServer', x=-44,64, y=48,91, z=13,63], EntityOtherPlayerMP['cookies557'/9931, l='MpServer', x=-40,70, y=49,00, z=22,12], EntityOtherPlayerMP['sigma_pyps_666'/9932, l='MpServer', x=20,25, y=44,00, z=40,16], EntityOtherPlayerMP['GGpusherGG'/9933, l='MpServer', x=33,08, y=49,00, z=-15,26]]
+	Chunk stats: MultiplayerChunkCache: 289, 289
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: 518,00,4,00,7,00 - World: (518,4,7), Chunk: (at 6,0,7 in 32,0; contains blocks 512,0,0 to 527,255,15), Region: (1,0; contains chunks 32,0 to 63,31, blocks 512,0,0 to 1023,255,511)
+	Level time: 14000 game time, 14000 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 41 total; [EntityOtherPlayerMP['james_2323'/9921, l='MpServer', x=6,06, y=50,91, z=-0,13], EntityOtherPlayerMP['karinanotstupid'/9923, l='MpServer', x=3,49, y=49,04, z=-44,62], EntityOtherPlayerMP['GoldApel'/9924, l='MpServer', x=-0,39, y=49,00, z=-46,97], EntityOtherPlayerMP['dima666'/9925, l='MpServer', x=-14,20, y=50,00, z=-42,65], EntityOtherPlayerMP['LiPrIk32'/9929, l='MpServer', x=-0,31, y=46,44, z=48,99], EntityOtherPlayerMP['Sprinp'/9930, l='MpServer', x=-44,64, y=48,91, z=13,63], EntityOtherPlayerMP['cookies557'/9931, l='MpServer', x=-40,70, y=49,00, z=22,12], EntityArmorStand['§a2:47'/9995, l='MpServer', x=19,50, y=44,97, z=38,50], EntityOtherPlayerMP['sigma_pyps_666'/9932, l='MpServer', x=20,25, y=44,00, z=40,16], EntityArmorStand['§cПустой'/9996, l='MpServer', x=19,50, y=44,72, z=38,50], EntityOtherPlayerMP['GGpusherGG'/9933, l='MpServer', x=33,08, y=49,00, z=-15,26], EntityArmorStand['§a2:34'/9942, l='MpServer', x=40,50, y=49,97, z=15,50], EntityPlayerSP['Hase_9675'/9922, l='MpServer', x=41,02, y=45,00, z=20,27], EntityArmorStand['§cПустой'/9943, l='MpServer', x=40,50, y=49,72, z=15,50], EntityOtherPlayerMP['Fainho955'/9920, l='MpServer', x=-41,31, y=45,31, z=1,66], EntityOtherPlayerMP['james_2323'/9921, l='MpServer', x=6,06, y=50,91, z=-0,13], EntityOtherPlayerMP['LiPrIk32'/9919, l='MpServer', x=-2,75, y=123,97, z=1,63], EntityOtherPlayerMP['karinanotstupid'/9923, l='MpServer', x=3,49, y=49,04, z=-44,62], EntityOtherPlayerMP['GoldApel'/9924, l='MpServer', x=-0,39, y=49,00, z=-46,97], EntityOtherPlayerMP['dima666'/9925, l='MpServer', x=-14,20, y=50,00, z=-42,65], EntityOtherPlayerMP['sigma_pyps_666'/9926, l='MpServer', x=0,00, y=125,00, z=0,00], EntityOtherPlayerMP['xStrqweistis'/9927, l='MpServer', x=2,28, y=124,00, z=-10,72], EntityOtherPlayerMP['Yorema'/9928, l='MpServer', x=-2,71, y=124,00, z=3,41], EntityArmorStand['§a2:35'/9952, l='MpServer', x=17,50, y=49,97, z=41,50], EntityOtherPlayerMP['LiPrIk32'/9929, l='MpServer', x=-0,31, y=46,44, z=48,99], EntityArmorStand['§cПустой'/9953, l='MpServer', x=17,50, y=49,72, z=41,50], EntityOtherPlayerMP['Sprinp'/9930, l='MpServer', x=-44,64, y=48,91, z=13,63], EntityArmorStand['§a2:35'/9954, l='MpServer', x=43,50, y=50,97, z=22,50], EntityOtherPlayerMP['cookies557'/9931, l='MpServer', x=-40,70, y=49,00, z=22,12], EntityArmorStand['Armour Stand'/9955, l='MpServer', x=43,50, y=50,72, z=22,50], EntityOtherPlayerMP['sigma_pyps_666'/9932, l='MpServer', x=20,25, y=44,00, z=40,16], EntityOtherPlayerMP['GGpusherGG'/9933, l='MpServer', x=33,08, y=49,00, z=-15,26], EntityArmorStand['§a2:38'/9959, l='MpServer', x=37,50, y=44,97, z=17,50], EntityArmorStand['Armour Stand'/9960, l='MpServer', x=37,50, y=44,72, z=17,50], EntityItem['item.item.bootsDiamond'/9965, l='MpServer', x=38,06, y=44,00, z=17,50], EntityItem['item.item.egg'/9966, l='MpServer', x=38,06, y=44,00, z=17,63], EntityItem['item.item.dyePowder.blue'/9969, l='MpServer', x=38,06, y=44,00, z=17,50], EntityItem['item.item.bucketWater'/9970, l='MpServer', x=38,06, y=44,00, z=17,44], EntityItem['item.item.expBottle'/9973, l='MpServer', x=38,06, y=44,00, z=17,69], EntityArmorStand['§a2:41'/9976, l='MpServer', x=24,50, y=50,97, z=44,50], EntityArmorStand['§cПустой'/9977, l='MpServer', x=24,50, y=50,72, z=44,50]]
+	Retry entities: 0 total; []
+	Server brand: NullCordX <- PaperSpigot
+	Server type: Non-integrated multiplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:356)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2526)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:313)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.9
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 1.8.0_392, Temurin
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Temurin
+	Memory: 469656736 bytes (447 MB) / 1266155520 bytes (1207 MB) up to 3797417984 bytes (3621 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 95
+	Launched Version: mcp
+	LWJGL: 2.9.4
+	OpenGL: NVIDIA GeForce GTX 1650/PCIe/SSE2 GL version 4.6.0 NVIDIA 546.33, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: Flare_32x_Revamp.zip
+	Current Language: English (UK)
+	Profiler Position: N/A (disabled)
+	CPU: 8x Intel(R) Core(TM) i5-9300H CPU @ 2.40GHz
+	OptiFine Version: OptiFine_1.8.9_HD_U_M6_pre2
+	OptiFine Build: ~~NULL~~
+	Render Distance Chunks: 8
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6.0 NVIDIA 546.33
+	OpenGlRenderer: NVIDIA GeForce GTX 1650/PCIe/SSE2
+	OpenGlVendor: NVIDIA Corporation
+	CpuCount: 8

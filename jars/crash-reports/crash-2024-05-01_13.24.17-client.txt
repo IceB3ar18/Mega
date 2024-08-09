@@ -1,0 +1,90 @@
+---- Minecraft Crash Report ----
+// Don't be sad, have a hug! <3
+
+Time: 01.05.24 13:24
+Description: Unexpected error
+
+java.lang.ArrayIndexOutOfBoundsException: -1
+	at net.minecraft.entity.player.InventoryPlayer.getStackInSlot(InventoryPlayer.java:566)
+	at club.mega.util.SlotSpoofHandler.getSpoofedStack(SlotSpoofHandler.java:24)
+	at net.minecraft.client.renderer.ItemRenderer.updateEquippedItem(ItemRenderer.java:590)
+	at net.minecraft.client.renderer.EntityRenderer.updateRenderer(EntityRenderer.java:353)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1987)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:981)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:285)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.entity.player.InventoryPlayer.getStackInSlot(InventoryPlayer.java:566)
+	at club.mega.util.SlotSpoofHandler.getSpoofedStack(SlotSpoofHandler.java:24)
+	at net.minecraft.client.renderer.ItemRenderer.updateEquippedItem(ItemRenderer.java:590)
+	at net.minecraft.client.renderer.EntityRenderer.updateRenderer(EntityRenderer.java:353)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 13 total; [EntityPlayerSP['Fire_Phoenix18'/13063642, l='MpServer', x=103,89, y=42,00, z=155,64], EntityOtherPlayerMP['attackable-3'/170, l='MpServer', x=109,53, y=42,00, z=146,41], EntityOtherPlayerMP['attackable-2'/173, l='MpServer', x=106,28, y=42,00, z=149,50], EntityOtherPlayerMP['attackable-1'/176, l='MpServer', x=109,50, y=42,00, z=152,41], EntityOtherPlayerMP['attackable-4'/179, l='MpServer', x=112,47, y=42,00, z=149,47], EntityOtherPlayerMP['attackable-1'/215, l='MpServer', x=112,72, y=42,00, z=169,15], EntityOtherPlayerMP['attackable-4'/218, l='MpServer', x=112,76, y=42,00, z=164,94], EntityOtherPlayerMP['attackable-3'/221, l='MpServer', x=107,81, y=42,00, z=164,21], EntityOtherPlayerMP['attackable-2'/224, l='MpServer', x=107,38, y=42,00, z=169,13], EntityOtherPlayerMP['Walking'/191, l='MpServer', x=92,90, y=44,00, z=160,48], EntityOtherPlayerMP['XOX0XO'/11655950, l='MpServer', x=90,56, y=44,00, z=163,31], EntityOtherPlayerMP['Velocity'/197, l='MpServer', x=141,94, y=42,00, z=181,59], EntityOtherPlayerMP['VelocityNoDelay'/212, l='MpServer', x=142,22, y=42,00, z=195,94]]
+	Chunk stats: MultiplayerChunkCache: 140, 140
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: 196,00,41,00,105,00 - World: (196,41,105), Chunk: (at 4,2,9 in 12,6; contains blocks 192,0,96 to 207,255,111), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 685352774 game time, 408000 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 43 total; [EntityPlayerSP['Fire_Phoenix18'/13063642, l='MpServer', x=103,89, y=42,00, z=155,64], EntityOtherPlayerMP['attackable-3'/170, l='MpServer', x=109,53, y=42,00, z=146,41], EntityOtherPlayerMP['attackable-2'/173, l='MpServer', x=106,28, y=42,00, z=149,50], EntityOtherPlayerMP['attackable-1'/176, l='MpServer', x=109,50, y=42,00, z=152,41], EntityOtherPlayerMP['attackable-4'/179, l='MpServer', x=112,47, y=42,00, z=149,47], EntityOtherPlayerMP['Velocity'/197, l='MpServer', x=141,94, y=42,00, z=181,59], EntityOtherPlayerMP['attackable-1'/215, l='MpServer', x=112,72, y=42,00, z=169,15], EntityOtherPlayerMP['attackable-4'/218, l='MpServer', x=112,76, y=42,00, z=164,94], EntityOtherPlayerMP['attackable-3'/221, l='MpServer', x=107,81, y=42,00, z=164,21], EntityOtherPlayerMP['attackable-2'/224, l='MpServer', x=107,38, y=42,00, z=169,13], EntityOtherPlayerMP['Walking'/191, l='MpServer', x=92,90, y=44,00, z=160,48], EntityOtherPlayerMP['XOX0XO'/11655950, l='MpServer', x=90,56, y=44,00, z=163,31], EntityOtherPlayerMP['Velocity'/197, l='MpServer', x=141,94, y=42,00, z=181,59], EntityZombie['§aKnockback 1'/144, l='MpServer', x=123,47, y=42,00, z=179,47], EntityZombie['§aKnockback 2'/145, l='MpServer', x=123,41, y=42,00, z=182,50], EntityZombie['§aKnockback 3'/146, l='MpServer', x=123,41, y=42,00, z=185,47], EntityZombie['§aKnockback 4'/147, l='MpServer', x=123,47, y=42,00, z=188,50], EntityZombie['§aKnockback 5'/148, l='MpServer', x=123,47, y=42,00, z=191,50], EntityOtherPlayerMP['VelocityNoDelay'/212, l='MpServer', x=142,22, y=42,00, z=195,94], EntityZombie['§aKnockback 6'/149, l='MpServer', x=123,47, y=42,00, z=194,50], EntityArmorStand['§cCivBreak'/150, l='MpServer', x=82,94, y=43,59, z=115,69], EntityOtherPlayerMP['attackable-1'/215, l='MpServer', x=112,72, y=42,00, z=169,15], EntityArmorStand['§cMore Killaura Stuff'/151, l='MpServer', x=105,31, y=43,59, z=139,84], EntityOtherPlayerMP['VelocityNoDelay'/212, l='MpServer', x=142,22, y=42,00, z=195,94], EntityOtherPlayerMP['attackable-4'/218, l='MpServer', x=112,76, y=42,00, z=164,94], EntityOtherPlayerMP['attackable-3'/221, l='MpServer', x=107,81, y=42,00, z=164,21], EntityArmorStand['§cVelocity'/157, l='MpServer', x=149,13, y=43,63, z=110,06], EntityArmorStand['§cJesus'/158, l='MpServer', x=154,63, y=43,63, z=136,38], EntityArmorStand['§cBreaker'/159, l='MpServer', x=84,59, y=43,63, z=148,09], EntityOtherPlayerMP['attackable-2'/224, l='MpServer', x=107,38, y=42,00, z=169,13], EntityArmorStand['§cChests'/160, l='MpServer', x=83,66, y=43,63, z=132,31], EntityArmorStand['§cScaffold'/161, l='MpServer', x=69,56, y=43,63, z=104,00], EntityArmorStand['§cSpeed Test'/162, l='MpServer', x=117,34, y=44,09, z=102,41], EntityArmorStand['§cLongJump'/163, l='MpServer', x=140,22, y=44,34, z=100,94], EntityArmorStand['§cFall'/164, l='MpServer', x=124,38, y=44,72, z=110,94], EntityArmorStand['§cPhase'/165, l='MpServer', x=167,44, y=45,47, z=109,50], EntityArmorStand['§cVelocity'/167, l='MpServer', x=132,19, y=45,88, z=181,03], EntityOtherPlayerMP['attackable-3'/170, l='MpServer', x=109,53, y=42,00, z=146,41], EntityOtherPlayerMP['attackable-2'/173, l='MpServer', x=106,28, y=42,00, z=149,50], EntityOtherPlayerMP['attackable-1'/176, l='MpServer', x=109,50, y=42,00, z=152,41], EntityOtherPlayerMP['attackable-4'/179, l='MpServer', x=112,47, y=42,00, z=149,47], EntityOtherPlayerMP['Walking'/191, l='MpServer', x=92,90, y=44,00, z=160,48], EntityOtherPlayerMP['XOX0XO'/11655950, l='MpServer', x=90,56, y=44,00, z=163,31]]
+	Retry entities: 0 total; []
+	Server brand: FlamePaper (Velocity)
+	Server type: Non-integrated multiplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:356)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2545)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:314)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.9
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 1.8.0_392, Temurin
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Temurin
+	Memory: 757428480 bytes (722 MB) / 996147200 bytes (950 MB) up to 3797417984 bytes (3621 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	Launched Version: mcp
+	LWJGL: 2.9.4
+	OpenGL: NVIDIA GeForce GTX 1650/PCIe/SSE2 GL version 4.6.0 NVIDIA 546.33, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: WitherArmy.zip
+	Current Language: English (UK)
+	Profiler Position: N/A (disabled)
+	CPU: 8x Intel(R) Core(TM) i5-9300H CPU @ 2.40GHz
+	OptiFine Version: OptiFine_1.8.9_HD_U_M6_pre2
+	OptiFine Build: ~~NULL~~
+	Render Distance Chunks: 8
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6.0 NVIDIA 546.33
+	OpenGlRenderer: NVIDIA GeForce GTX 1650/PCIe/SSE2
+	OpenGlVendor: NVIDIA Corporation
+	CpuCount: 8

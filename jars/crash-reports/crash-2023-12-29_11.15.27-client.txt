@@ -1,0 +1,76 @@
+---- Minecraft Crash Report ----
+// Who set us up the TNT?
+
+Time: 29.12.23 11:15
+Description: Initializing game
+
+java.lang.NumberFormatException: For input string: "true"
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at com.google.gson.JsonPrimitive.getAsDouble(JsonPrimitive.java:193)
+	at club.mega.file.ModuleSaver.load(ModuleSaver.java:106)
+	at club.mega.Mega.startUp(Mega.java:57)
+	at net.minecraft.client.Minecraft.startGame(Minecraft.java:423)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:261)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)
+	at sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)
+	at java.lang.Double.parseDouble(Double.java:538)
+	at com.google.gson.JsonPrimitive.getAsDouble(JsonPrimitive.java:193)
+	at club.mega.file.ModuleSaver.load(ModuleSaver.java:106)
+	at club.mega.Mega.startUp(Mega.java:57)
+	at net.minecraft.client.Minecraft.startGame(Minecraft.java:423)
+
+-- Initialization --
+Details:
+Stacktrace:
+	at net.minecraft.client.Minecraft.run(Minecraft.java:261)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.9
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 1.8.0_392, Temurin
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Temurin
+	Memory: 260850096 bytes (248 MB) / 842530816 bytes (803 MB) up to 3787980800 bytes (3612 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	Launched Version: mcp
+	LWJGL: 2.9.4
+	OpenGL: Intel(R) UHD Graphics 630 GL version 4.6.0 - Build 27.20.100.8729, Intel
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: No
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: Flare_32x_Revamp.zip
+	Current Language: English (UK)
+	Profiler Position: N/A (disabled)
+	CPU: 8x Intel(R) Core(TM) i5-9300H CPU @ 2.40GHz
+	OptiFine Version: OptiFine_1.8.9_HD_U_M6_pre2
+	OptiFine Build: ~~NULL~~
+	Render Distance Chunks: 8
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6.0 - Build 27.20.100.8729
+	OpenGlRenderer: Intel(R) UHD Graphics 630
+	OpenGlVendor: Intel
+	CpuCount: 8

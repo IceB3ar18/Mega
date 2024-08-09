@@ -1,0 +1,104 @@
+---- Minecraft Crash Report ----
+// Who set us up the TNT?
+
+Time: 24.05.24 18:39
+Description: Rendering screen
+
+java.lang.IllegalArgumentException: Width (110) and height (0) cannot be <= 0
+	at java.awt.image.DirectColorModel.createCompatibleWritableRaster(DirectColorModel.java:1016)
+	at java.awt.image.BufferedImage.<init>(BufferedImage.java:324)
+	at club.mega.gui.click.components.ColorPickerComponent.drawComponent(ColorPickerComponent.java:42)
+	at club.mega.gui.click.ModuleButton.drawButton(ModuleButton.java:77)
+	at club.mega.gui.click.Panel.drawScreen(Panel.java:78)
+	at club.mega.gui.click.ClickGUI.lambda$drawScreen$0(ClickGUI.java:68)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at club.mega.gui.click.ClickGUI.drawScreen(ClickGUI.java:67)
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1319)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1008)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:286)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at java.awt.image.DirectColorModel.createCompatibleWritableRaster(DirectColorModel.java:1016)
+	at java.awt.image.BufferedImage.<init>(BufferedImage.java:324)
+	at club.mega.gui.click.components.ColorPickerComponent.drawComponent(ColorPickerComponent.java:42)
+	at club.mega.gui.click.ModuleButton.drawButton(ModuleButton.java:77)
+	at club.mega.gui.click.Panel.drawScreen(Panel.java:78)
+	at club.mega.gui.click.ClickGUI.lambda$drawScreen$0(ClickGUI.java:68)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at club.mega.gui.click.ClickGUI.drawScreen(ClickGUI.java:67)
+
+-- Screen render details --
+Details:
+	Screen name: club.mega.gui.click.ClickGUI
+	Mouse location: Scaled: (522, 84). Absolute: (1045, 840)
+	Screen size: Scaled: (960, 505). Absolute: (1920, 1009). Scale factor of 2
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player31'/420, l='MpServer', x=2208,54, y=92,00, z=1773,84]]
+	Chunk stats: MultiplayerChunkCache: 289, 289
+	Level seed: 0
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: 236,00,64,00,256,00 - World: (236,64,256), Chunk: (at 12,4,0 in 14,16; contains blocks 224,0,256 to 239,255,271), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 0 game time, 0 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 75 total; [EntitySheep['Sheep'/513, l='MpServer', x=2216,28, y=67,00, z=1744,06], EntityRabbit['Rabbit'/514, l='MpServer', x=2210,38, y=69,00, z=1836,59], EntityPlayerSP['Player31'/420, l='MpServer', x=2208,54, y=92,00, z=1773,84], EntitySheep['Sheep'/525, l='MpServer', x=2226,53, y=85,00, z=1794,28], EntitySheep['Sheep'/526, l='MpServer', x=2235,16, y=77,00, z=1812,63], EntitySheep['Sheep'/527, l='MpServer', x=2224,13, y=72,00, z=1808,66], EntitySquid['Squid'/528, l='MpServer', x=2228,47, y=60,00, z=1836,50], EntityBat['Bat'/658, l='MpServer', x=2285,50, y=24,00, z=1789,50], EntityRabbit['Rabbit'/530, l='MpServer', x=2227,50, y=63,00, z=1841,50], EntityRabbit['Rabbit'/531, l='MpServer', x=2238,19, y=63,00, z=1851,34], EntitySkeleton['Skeleton'/664, l='MpServer', x=2181,50, y=33,00, z=1784,50], EntityXPOrb['Experience Orb'/546, l='MpServer', x=2245,75, y=79,00, z=1784,81], EntityXPOrb['Experience Orb'/547, l='MpServer', x=2242,00, y=79,00, z=1787,75], EntityItem['item.item.rottenFlesh'/548, l='MpServer', x=2242,84, y=82,00, z=1782,44], EntityZombie['Zombie'/676, l='MpServer', x=2175,50, y=32,00, z=1772,50], EntityXPOrb['Experience Orb'/549, l='MpServer', x=2243,47, y=80,00, z=1784,34], EntitySheep['Sheep'/550, l='MpServer', x=2241,69, y=79,00, z=1808,38], EntityZombie['Zombie'/551, l='MpServer', x=2245,56, y=26,00, z=1825,97], EntityBat['Bat'/552, l='MpServer', x=2243,75, y=27,10, z=1828,50], EntitySquid['Squid'/553, l='MpServer', x=2242,09, y=61,03, z=1836,84], EntityRabbit['Rabbit'/554, l='MpServer', x=2248,94, y=66,00, z=1848,25], EntitySheep['Sheep'/557, l='MpServer', x=2261,91, y=72,00, z=1697,00], EntitySheep['Sheep'/558, l='MpServer', x=2257,53, y=72,00, z=1755,66], EntityItem['item.item.rottenFlesh'/559, l='MpServer', x=2269,53, y=73,00, z=1793,78], EntitySheep['Sheep'/561, l='MpServer', x=2281,25, y=71,00, z=1695,16], EntitySheep['Sheep'/562, l='MpServer', x=2283,94, y=71,00, z=1699,00], EntitySheep['Sheep'/563, l='MpServer', x=2282,91, y=71,00, z=1710,97], EntityChicken['Chicken'/564, l='MpServer', x=2280,56, y=71,00, z=1739,38], EntitySheep['Sheep'/565, l='MpServer', x=2283,69, y=71,00, z=1738,19], EntityChicken['Chicken'/566, l='MpServer', x=2273,69, y=70,00, z=1732,34], EntityChicken['Chicken'/568, l='MpServer', x=2273,38, y=72,00, z=1767,56], EntitySkeleton['Skeleton'/698, l='MpServer', x=2185,50, y=33,00, z=1782,50], EntityXPOrb['Experience Orb'/442, l='MpServer', x=2123,75, y=61,00, z=1827,25], EntitySkeleton['Skeleton'/699, l='MpServer', x=2188,50, y=33,00, z=1783,50], EntityEnderman['Enderman'/447, l='MpServer', x=2143,56, y=52,00, z=1728,00], EntityCreeper['Creeper'/448, l='MpServer', x=2132,47, y=50,00, z=1717,25], EntityZombie['Zombie'/449, l='MpServer', x=2131,50, y=47,00, z=1738,50], EntityZombie['Zombie'/450, l='MpServer', x=2131,50, y=47,00, z=1735,50], EntityZombie['Zombie'/452, l='MpServer', x=2136,44, y=31,00, z=1757,03], EntitySkeleton['Skeleton'/453, l='MpServer', x=2143,56, y=30,00, z=1761,91], EntitySkeleton['Skeleton'/454, l='MpServer', x=2140,50, y=29,00, z=1761,50], EntityBat['Bat'/455, l='MpServer', x=2136,25, y=54,10, z=1773,75], EntityCreeper['Creeper'/457, l='MpServer', x=2144,44, y=55,00, z=1761,94], EntityZombie['Zombie'/458, l='MpServer', x=2152,50, y=16,00, z=1791,50], EntityZombie['Zombie'/459, l='MpServer', x=2151,50, y=16,00, z=1789,50], EntitySkeleton['Skeleton'/460, l='MpServer', x=2152,50, y=16,00, z=1789,50], EntitySkeleton['Skeleton'/461, l='MpServer', x=2150,50, y=16,00, z=1790,50], EntityBat['Bat'/462, l='MpServer', x=2153,41, y=37,56, z=1806,00], EntitySkeleton['Skeleton'/465, l='MpServer', x=2174,50, y=64,00, z=1734,50], EntityCreeper['Creeper'/466, l='MpServer', x=2175,00, y=30,00, z=1771,53], EntitySkeleton['Skeleton'/467, l='MpServer', x=2171,50, y=27,00, z=1780,50], EntityCreeper['Creeper'/468, l='MpServer', x=2170,50, y=24,00, z=1786,50], EntityZombie['Zombie'/469, l='MpServer', x=2165,81, y=24,00, z=1787,28], EntityCreeper['Creeper'/470, l='MpServer', x=2165,31, y=32,00, z=1781,03], EntitySpider['Spider'/471, l='MpServer', x=2174,56, y=34,00, z=1785,69], EntityCreeper['Creeper'/472, l='MpServer', x=2174,50, y=54,00, z=1815,50], EntityZombie['Zombie'/477, l='MpServer', x=2178,47, y=26,00, z=1788,91], EntityBat['Bat'/478, l='MpServer', x=2177,78, y=26,00, z=1787,88], EntityZombie['Zombie'/479, l='MpServer', x=2187,50, y=32,00, z=1787,50], EntityZombie['Zombie'/480, l='MpServer', x=2186,50, y=32,00, z=1789,50], EntityZombie['Zombie'/481, l='MpServer', x=2178,53, y=34,00, z=1785,94], EntitySpider['Spider'/482, l='MpServer', x=2185,59, y=32,00, z=1785,44], EntityBat['Bat'/483, l='MpServer', x=2187,38, y=34,78, z=1789,34], EntitySheep['Sheep'/484, l='MpServer', x=2181,53, y=71,00, z=1788,31], EntitySheep['Sheep'/485, l='MpServer', x=2180,56, y=77,00, z=1795,75], EntitySheep['Sheep'/486, l='MpServer', x=2189,50, y=82,00, z=1810,66], EntitySheep['Sheep'/498, l='MpServer', x=2202,56, y=62,00, z=1752,69], EntitySheep['Sheep'/499, l='MpServer', x=2207,66, y=65,00, z=1753,44], EntityCreeper['Creeper'/500, l='MpServer', x=2193,50, y=52,00, z=1781,50], EntityCreeper['Creeper'/501, l='MpServer', x=2193,34, y=51,00, z=1783,53], EntitySkeleton['Skeleton'/502, l='MpServer', x=2200,31, y=51,56, z=1782,94], EntitySheep['Sheep'/503, l='MpServer', x=2199,22, y=79,00, z=1803,88], EntityRabbit['Rabbit'/504, l='MpServer', x=2199,50, y=70,00, z=1852,50], EntityRabbit['Rabbit'/505, l='MpServer', x=2199,41, y=69,00, z=1845,31], EntityRabbit['Rabbit'/506, l='MpServer', x=2194,66, y=64,00, z=1841,34]]
+	Retry entities: 0 total; []
+	Server brand: vanilla
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:356)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2550)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:307)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.9
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 1.8.0_392, Temurin
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Temurin
+	Memory: 854495800 bytes (814 MB) / 1310720000 bytes (1250 MB) up to 3797417984 bytes (3621 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 95
+	Launched Version: mcp
+	LWJGL: 2.9.4
+	OpenGL: NVIDIA GeForce GTX 1650/PCIe/SSE2 GL version 4.6.0 NVIDIA 546.33, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: Alol.zip
+	Current Language: English (UK)
+	Profiler Position: N/A (disabled)
+	CPU: 8x Intel(R) Core(TM) i5-9300H CPU @ 2.40GHz
+	OptiFine Version: OptiFine_1.8.9_HD_U_M6_pre2
+	OptiFine Build: ~~NULL~~
+	Render Distance Chunks: 8
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6.0 NVIDIA 546.33
+	OpenGlRenderer: NVIDIA GeForce GTX 1650/PCIe/SSE2
+	OpenGlVendor: NVIDIA Corporation
+	CpuCount: 8

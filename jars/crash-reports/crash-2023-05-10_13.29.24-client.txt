@@ -1,0 +1,90 @@
+---- Minecraft Crash Report ----
+// Daisy, daisy...
+
+Time: 10.05.23 13:29
+Description: Unexpected error
+
+java.lang.NullPointerException: Unexpected error
+	at net.minecraft.client.entity.AbstractClientPlayer.getLook(AbstractClientPlayer.java:217)
+	at net.minecraft.entity.Entity.rayTrace(Entity.java:1254)
+	at net.minecraft.client.renderer.EntityRenderer.getMouseOver(EntityRenderer.java:418)
+	at net.minecraft.client.renderer.EntityRenderer.renderWorld(EntityRenderer.java:1442)
+	at net.minecraft.client.renderer.EntityRenderer.updateCameraAndRender(EntityRenderer.java:1258)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1033)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:352)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.client.entity.AbstractClientPlayer.getLook(AbstractClientPlayer.java:217)
+	at net.minecraft.entity.Entity.rayTrace(Entity.java:1254)
+	at net.minecraft.client.renderer.EntityRenderer.getMouseOver(EntityRenderer.java:418)
+	at net.minecraft.client.renderer.EntityRenderer.renderWorld(EntityRenderer.java:1442)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 16 total; [EntityPlayerSP['MEGAotL9RB7ISrL9'/406434, l='MpServer', x=0,05, y=94,00, z=6,30], EntityOtherPlayerMP['Zainop'/405726, l='MpServer', x=0,72, y=92,35, z=8,01], EntityOtherPlayerMP['Mrlolgamer123'/405382, l='MpServer', x=0,36, y=95,00, z=0,74], EntityOtherPlayerMP['MaksimiNika'/405509, l='MpServer', x=-6,59, y=52,03, z=38,53], EntityOtherPlayerMP['NotBlueed'/405171, l='MpServer', x=2,75, y=29,91, z=2,06], EntityOtherPlayerMP['UJJUWAL'/405255, l='MpServer', x=0,89, y=90,32, z=8,76], EntityOtherPlayerMP['Timur12211'/405299, l='MpServer', x=2,53, y=31,62, z=25,63], EntityOtherPlayerMP['Sharfik4'/405770, l='MpServer', x=1,82, y=32,07, z=22,12], EntityOtherPlayerMP['§e§lFeedback'/453135, l='MpServer', x=2,50, y=95,00, z=2,50], EntityOtherPlayerMP['§a§lKits'/453136, l='MpServer', x=-1,50, y=95,00, z=2,50], EntityOtherPlayerMP['misiek620'/405663, l='MpServer', x=-0,63, y=60,23, z=38,49], EntityOtherPlayerMP['Matthevs'/405168, l='MpServer', x=2,86, y=47,30, z=14,46], EntityOtherPlayerMP['Divad_2009'/405425, l='MpServer', x=-4,87, y=62,00, z=36,37], EntityOtherPlayerMP['Robab_'/405448, l='MpServer', x=1,16, y=92,60, z=7,78], EntityOtherPlayerMP['YT_Bugatti'/406233, l='MpServer', x=1,81, y=40,00, z=43,08], EntityOtherPlayerMP['meow1234'/405814, l='MpServer', x=0,50, y=95,00, z=0,50]]
+	Chunk stats: MultiplayerChunkCache: 120, 120
+	Level seed: 0
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: 264,00,64,00,-71,00 - World: (264,64,-71), Chunk: (at 8,4,9 in 16,-5; contains blocks 256,0,-80 to 271,255,-65), Region: (0,-1; contains chunks 0,-32 to 31,-1, blocks 0,0,-512 to 511,255,-1)
+	Level time: 343 game time, 15501 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 59 total; [EntityOtherPlayerMP['Mrlolgamer123'/405382, l='MpServer', x=0,36, y=95,00, z=0,74], EntityOtherPlayerMP['UJJUWAL'/405255, l='MpServer', x=0,89, y=90,32, z=8,76], EntityOtherPlayerMP['UJJUWAL'/405255, l='MpServer', x=0,89, y=90,32, z=8,76], EntityOtherPlayerMP['meow1234'/405814, l='MpServer', x=5,66, y=0,35, z=38,61], EntityOtherPlayerMP['Divad_2009'/405425, l='MpServer', x=4,25, y=1,72, z=38,16], EntityOtherPlayerMP['MaksimiNika'/405509, l='MpServer', x=-6,59, y=52,03, z=38,53], EntityOtherPlayerMP['§e§lFeedback'/453113, l='MpServer', x=2,50, y=95,00, z=2,50], EntityOtherPlayerMP['YT_Bugatti'/406233, l='MpServer', x=1,81, y=40,00, z=43,08], EntityOtherPlayerMP['§e§lFeedback'/453135, l='MpServer', x=2,50, y=95,00, z=2,50], EntityOtherPlayerMP['Sharfik4'/405770, l='MpServer', x=1,82, y=32,07, z=22,12], EntityOtherPlayerMP['Divad_2009'/405425, l='MpServer', x=-4,87, y=62,00, z=36,37], EntityOtherPlayerMP['§a§lKits'/453136, l='MpServer', x=-1,50, y=95,00, z=2,50], EntityOtherPlayerMP['misiek620'/405663, l='MpServer', x=-0,63, y=60,23, z=38,49], EntityOtherPlayerMP['YT_Bugatti'/406233, l='MpServer', x=1,83, y=44,69, z=49,67], EntityOtherPlayerMP['meow1234'/405814, l='MpServer', x=1,20, y=0,39, z=17,40], EntityOtherPlayerMP['§e§lFeedback'/453135, l='MpServer', x=2,50, y=95,00, z=2,50], EntityOtherPlayerMP['§a§lKits'/453136, l='MpServer', x=-1,50, y=95,00, z=2,50], EntityArmorStand['§f# 7 §4§aDepsik_ §8- §e71952'/406438, l='MpServer', x=3,50, y=96,19, z=0,50], EntityArmorStand['§f# 6 §4§bApsorb §8- §e74355'/406439, l='MpServer', x=3,50, y=96,50, z=0,50], EntityOtherPlayerMP['misiek620'/405663, l='MpServer', x=-2,90, y=44,73, z=49,79], EntityArmorStand['§f# 9 §4§1Ungluecklicher §8- §e49717'/406436, l='MpServer', x=3,50, y=95,59, z=0,50], EntityArmorStand['§f# 8 §4§al6nb §8- §e58053'/406437, l='MpServer', x=3,50, y=95,88, z=0,50], EntityArmorStand['§f# 10 §4§aMiDg §8- §e47146'/406435, l='MpServer', x=3,50, y=95,28, z=0,50], EntityArmorStand['§e§lTOP PLAYERS'/406446, l='MpServer', x=3,50, y=98,59, z=0,50], EntityOtherPlayerMP['misiek620'/405663, l='MpServer', x=-0,63, y=60,23, z=38,49], EntityArmorStand['§7Placed blocks §8» §a3'/406447, l='MpServer', x=-2,50, y=96,28, z=0,50], EntityArmorStand['§f# 1 §4§a_DeadHeart §8- §e100928'/406444, l='MpServer', x=3,50, y=97,97, z=0,50], EntityArmorStand['§a'/406445, l='MpServer', x=3,50, y=98,28, z=0,50], EntityArmorStand['§f# 3 §4§aApex_SK §8- §e85659'/406442, l='MpServer', x=3,50, y=97,38, z=0,50], EntityArmorStand['§f# 2 §4§asep78 §8- §e99356'/406443, l='MpServer', x=3,50, y=97,69, z=0,50], EntityArmorStand['§f# 5 §4§aMinecraftPower76 §8- §e81692'/406440, l='MpServer', x=3,50, y=96,78, z=0,50], EntityArmorStand['§f# 4 §4§agovahintria §8- §e82463'/406441, l='MpServer', x=3,50, y=97,09, z=0,50], EntityArmorStand['§e§lYOUR GLOBAL STATS'/406454, l='MpServer', x=-2,50, y=98,38, z=0,50], EntityArmorStand['§7Rank §8» §a-1'/406452, l='MpServer', x=-2,50, y=97,78, z=0,50], EntityArmorStand['§a'/406453, l='MpServer', x=-2,50, y=98,09, z=0,50], EntityArmorStand['§7Kills §8» §a0'/406450, l='MpServer', x=-2,50, y=97,19, z=0,50], EntityOtherPlayerMP['NotBlueed'/405171, l='MpServer', x=2,75, y=29,91, z=2,06], EntityOtherPlayerMP['Timur12211'/405299, l='MpServer', x=2,53, y=31,62, z=25,63], EntityArmorStand['§7Honor §8» §a0 §8( §7Bronze §8)'/406451, l='MpServer', x=-2,50, y=97,50, z=0,50], EntityOtherPlayerMP['Robab_'/405448, l='MpServer', x=0,44, y=2,04, z=31,47], EntityArmorStand['§7K/D §8» §a0.0'/406448, l='MpServer', x=-2,50, y=96,59, z=0,50], EntityOtherPlayerMP['Matthevs'/405168, l='MpServer', x=2,86, y=47,30, z=14,46], EntityOtherPlayerMP['Matthevs'/405168, l='MpServer', x=2,86, y=47,30, z=14,46], EntityArmorStand['§7Deaths §8» §a2'/406449, l='MpServer', x=-2,50, y=96,88, z=0,50], EntityOtherPlayerMP['meow1234'/405814, l='MpServer', x=0,50, y=95,00, z=0,50], EntityOtherPlayerMP['§a§lKits'/453114, l='MpServer', x=-1,50, y=95,00, z=2,50], EntityOtherPlayerMP['Robab_'/405448, l='MpServer', x=-4,55, y=47,86, z=48,73], EntityOtherPlayerMP['Timur12211'/405299, l='MpServer', x=2,53, y=31,62, z=25,63], EntityOtherPlayerMP['Sharfik4'/405770, l='MpServer', x=1,82, y=32,07, z=22,12], EntityOtherPlayerMP['misiek620'/405663, l='MpServer', x=-2,56, y=47,34, z=48,47], EntityOtherPlayerMP['Zainop'/405726, l='MpServer', x=0,72, y=92,35, z=8,01], EntityOtherPlayerMP['YT_Bugatti'/406233, l='MpServer', x=1,81, y=40,00, z=43,08], EntityOtherPlayerMP['Robab_'/405448, l='MpServer', x=1,16, y=92,60, z=7,78], EntityPlayerSP['MEGAotL9RB7ISrL9'/406434, l='MpServer', x=0,05, y=94,00, z=6,30], EntityOtherPlayerMP['Zainop'/405726, l='MpServer', x=0,72, y=92,35, z=8,01], EntityOtherPlayerMP['Matthevs'/405168, l='MpServer', x=-3,70, y=3,28, z=11,16], EntityOtherPlayerMP['Mrlolgamer123'/405382, l='MpServer', x=0,36, y=95,00, z=0,74], EntityOtherPlayerMP['MaksimiNika'/405509, l='MpServer', x=-6,59, y=52,03, z=38,53], EntityOtherPlayerMP['NotBlueed'/405171, l='MpServer', x=2,75, y=29,91, z=2,06]]
+	Retry entities: 0 total; []
+	Server brand: TwerionNet (Velocity)
+	Server type: Non-integrated multiplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:356)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2605)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:381)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.9
+	Operating System: Windows 8.1 (amd64) version 6.3
+	Java Version: 1.8.0_51, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 611731512 bytes (583 MB) / 1065353216 bytes (1016 MB) up to 3797417984 bytes (3621 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 95
+	Launched Version: mcp
+	LWJGL: 2.9.4
+	OpenGL: NVIDIA GeForce GTX 1650/PCIe/SSE2 GL version 4.6.0 NVIDIA 531.79, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: No
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 8x Intel(R) Core(TM) i5-9300H CPU @ 2.40GHz
+	OptiFine Version: OptiFine_1.8.9_HD_U_M6_pre2
+	OptiFine Build: ~~NULL~~
+	Render Distance Chunks: 8
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6.0 NVIDIA 531.79
+	OpenGlRenderer: NVIDIA GeForce GTX 1650/PCIe/SSE2
+	OpenGlVendor: NVIDIA Corporation
+	CpuCount: 8

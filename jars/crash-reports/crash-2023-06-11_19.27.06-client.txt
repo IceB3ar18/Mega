@@ -1,0 +1,88 @@
+---- Minecraft Crash Report ----
+// Surprise! Haha. Well, this is awkward.
+
+Time: 11.06.23 19:27
+Description: Unexpected error
+
+java.lang.NullPointerException: Unexpected error
+	at net.minecraft.client.entity.AbstractClientPlayer.getLook(AbstractClientPlayer.java:217)
+	at net.minecraft.entity.Entity.rayTrace(Entity.java:1251)
+	at net.minecraft.client.renderer.EntityRenderer.getMouseOver(EntityRenderer.java:418)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1621)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1013)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:354)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.client.entity.AbstractClientPlayer.getLook(AbstractClientPlayer.java:217)
+	at net.minecraft.entity.Entity.rayTrace(Entity.java:1251)
+	at net.minecraft.client.renderer.EntityRenderer.getMouseOver(EntityRenderer.java:418)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 24 total; [EntityPlayerSP['MEGAQpxV3V'/1211438, l='MpServer', x=-113,50, y=42,00, z=-246,50], EntityOtherPlayerMP['Soul_'/1208461, l='MpServer', x=-85,53, y=42,34, z=-258,78], EntityOtherPlayerMP['thedenizzz'/1211017, l='MpServer', x=-101,03, y=44,49, z=-247,21], EntityOtherPlayerMP['evaap'/1210469, l='MpServer', x=-113,96, y=42,00, z=-244,34], EntityOtherPlayerMP['ViperMini'/1211357, l='MpServer', x=-108,13, y=44,59, z=-246,50], EntityOtherPlayerMP['kubuka'/1211179, l='MpServer', x=-113,50, y=42,00, z=-246,50], EntityOtherPlayerMP['zxcKronge'/1208542, l='MpServer', x=-87,91, y=43,13, z=-240,91], EntityOtherPlayerMP['Hawar_Topp'/1201995, l='MpServer', x=-83,63, y=41,00, z=-250,09], EntityOtherPlayerMP['Herr_Steif'/1211260, l='MpServer', x=-92,63, y=41,00, z=-234,47], EntityOtherPlayerMP['PuntoYT'/1211098, l='MpServer', x=-86,50, y=41,00, z=-255,03], EntityOtherPlayerMP[''/1359728, l='MpServer', x=-85,50, y=42,00, z=-255,50], EntityOtherPlayerMP[''/1359700, l='MpServer', x=-85,50, y=42,00, z=-237,50], EntityOtherPlayerMP[''/1359685, l='MpServer', x=-104,50, y=43,00, z=-251,50], EntityOtherPlayerMP[''/1359681, l='MpServer', x=-83,50, y=42,00, z=-239,50], EntityOtherPlayerMP[''/1359732, l='MpServer', x=-87,50, y=42,00, z=-257,50], EntityOtherPlayerMP[''/1359696, l='MpServer', x=-83,50, y=42,00, z=-253,50], EntityOtherPlayerMP[''/1359692, l='MpServer', x=-81,50, y=42,00, z=-241,50], EntityOtherPlayerMP[''/1359688, l='MpServer', x=-113,50, y=43,00, z=-254,50], EntityOtherPlayerMP[''/1359725, l='MpServer', x=-113,50, y=43,00, z=-238,50], EntityOtherPlayerMP[''/1359714, l='MpServer', x=-81,50, y=42,00, z=-246,50], EntityOtherPlayerMP[''/1359704, l='MpServer', x=-87,50, y=42,00, z=-235,50], EntityOtherPlayerMP[''/1359708, l='MpServer', x=-104,50, y=43,00, z=-241,50], EntityOtherPlayerMP[''/1359721, l='MpServer', x=-121,50, y=43,00, z=-246,50], EntityOtherPlayerMP[''/1359718, l='MpServer', x=-81,50, y=42,00, z=-251,50]]
+	Chunk stats: MultiplayerChunkCache: 120, 120
+	Level seed: 0
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: -114,00,42,00,-247,00 - World: (-114,42,-247), Chunk: (at 14,2,9 in -8,-16; contains blocks -128,0,-256 to -113,255,-241), Region: (-1,-1; contains chunks -32,-32 to -1,-1, blocks -512,0,-512 to -1,255,-1)
+	Level time: 61396 game time, 28500 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 109 total; [EntityPlayerSP['MEGAQpxV3V'/1211438, l='MpServer', x=-113,50, y=42,00, z=-246,50], EntityOtherPlayerMP['Soul_'/1208461, l='MpServer', x=-85,53, y=42,34, z=-258,78], EntityOtherPlayerMP['thedenizzz'/1211017, l='MpServer', x=-101,03, y=44,49, z=-247,21], EntityOtherPlayerMP['evaap'/1210469, l='MpServer', x=-113,96, y=42,00, z=-244,34], EntityOtherPlayerMP['ViperMini'/1211357, l='MpServer', x=-108,13, y=44,59, z=-246,50], EntityOtherPlayerMP['kubuka'/1211179, l='MpServer', x=-113,50, y=42,00, z=-246,50], EntityArmorStand['§bzNxgi'/1211442, l='MpServer', x=2928,50, y=37,78, z=2996,50], EntityArmorStand['§ePoints §8» §e23810'/1211443, l='MpServer', x=2928,50, y=38,09, z=2996,50], EntityArmorStand['§ePoints §8» §e919765'/1211440, l='MpServer', x=2931,50, y=38,09, z=2998,50], EntityArmorStand['§6Rank 1 §6Globally'/1211441, l='MpServer', x=2931,50, y=38,38, z=2998,50], EntityArmorStand['§ePoints §8» §e5920'/1211446, l='MpServer', x=2926,50, y=38,09, z=2993,50], EntityArmorStand['§6Rank 1 §6Daily'/1211447, l='MpServer', x=2926,50, y=38,38, z=2993,50], EntityArmorStand['§6Rank 1 §6Monthly'/1211444, l='MpServer', x=2928,50, y=38,38, z=2996,50], EntityArmorStand['§bzNxgi'/1211445, l='MpServer', x=2926,50, y=37,78, z=2993,50], EntityOtherPlayerMP['kubuka'/1211179, l='MpServer', x=-113,50, y=42,00, z=-246,50], EntityArmorStand['§dWienerisch'/1211439, l='MpServer', x=2931,50, y=37,78, z=2998,50], EntityArmorStand['§6§lVote Rewards'/1211474, l='MpServer', x=-104,50, y=45,09, z=-251,50], EntityOtherPlayerMP[''/1359700, l='MpServer', x=-85,50, y=42,00, z=-237,50], EntityArmorStand['§8Discord: §atotKing#0519'/1211475, l='MpServer', x=-113,50, y=44,78, z=-254,50], EntityArmorStand['Armor Stand'/1211472, l='MpServer', x=-83,50, y=44,59, z=-239,50], EntityArmorStand['§7§o*RIGHT CLICK*'/1211473, l='MpServer', x=-104,50, y=44,78, z=-251,50], EntityArmorStand['§337 Players'/1211478, l='MpServer', x=-81,50, y=43,78, z=-241,50], EntityOtherPlayerMP[''/1359696, l='MpServer', x=-83,50, y=42,00, z=-253,50], EntityArmorStand['§3§lCityBuild SMP'/1211479, l='MpServer', x=-81,50, y=44,09, z=-241,50], EntityArmorStand['§cInstagram: §atobiklein99'/1211476, l='MpServer', x=-113,50, y=45,09, z=-254,50], EntityArmorStand['§aFollow §4totKing §aon'/1211477, l='MpServer', x=-113,50, y=45,38, z=-254,50], EntityArmorStand['§444 Players'/1211482, l='MpServer', x=-83,50, y=43,78, z=-253,50], EntityOtherPlayerMP[''/1359708, l='MpServer', x=-104,50, y=43,00, z=-241,50], EntityArmorStand['§4§lSkyPvP'/1211483, l='MpServer', x=-83,50, y=44,09, z=-253,50], EntityItem['item.tile.prismarine.rough'/1211480, l='MpServer', x=-81,50, y=44,59, z=-241,50], EntityArmorStand['Armor Stand'/1211481, l='MpServer', x=-81,50, y=44,59, z=-241,50], EntityArmorStand['§b39 Players'/1211486, l='MpServer', x=-85,50, y=43,78, z=-237,50], EntityOtherPlayerMP[''/1359704, l='MpServer', x=-87,50, y=42,00, z=-235,50], EntityArmorStand['§b§lMLGRush'/1211487, l='MpServer', x=-85,50, y=44,09, z=-237,50], EntityOtherPlayerMP['zxcKronge'/1208542, l='MpServer', x=-87,91, y=43,13, z=-240,91], EntityItem['item.item.feather'/1211484, l='MpServer', x=-83,50, y=44,59, z=-253,50], EntityOtherPlayerMP['Hawar_Topp'/1201995, l='MpServer', x=-83,63, y=41,00, z=-250,09], EntityArmorStand['Armor Stand'/1211485, l='MpServer', x=-83,50, y=44,59, z=-253,50], EntityOtherPlayerMP['Herr_Steif'/1211260, l='MpServer', x=-92,63, y=41,00, z=-234,47], EntityOtherPlayerMP['PuntoYT'/1211098, l='MpServer', x=-86,50, y=41,00, z=-255,03], EntityOtherPlayerMP[''/1359728, l='MpServer', x=-85,50, y=42,00, z=-255,50], EntityOtherPlayerMP[''/1359685, l='MpServer', x=-104,50, y=43,00, z=-251,50], EntityOtherPlayerMP[''/1359700, l='MpServer', x=-85,50, y=42,00, z=-237,50], EntityOtherPlayerMP[''/1359685, l='MpServer', x=-104,50, y=43,00, z=-251,50], EntityOtherPlayerMP[''/1359681, l='MpServer', x=-83,50, y=42,00, z=-239,50], EntityOtherPlayerMP[''/1359681, l='MpServer', x=-83,50, y=42,00, z=-239,50], EntityOtherPlayerMP[''/1359732, l='MpServer', x=-87,50, y=42,00, z=-257,50], EntityOtherPlayerMP[''/1359696, l='MpServer', x=-83,50, y=42,00, z=-253,50], EntityOtherPlayerMP[''/1359692, l='MpServer', x=-81,50, y=42,00, z=-241,50], EntityOtherPlayerMP[''/1359692, l='MpServer', x=-81,50, y=42,00, z=-241,50], EntityOtherPlayerMP[''/1359688, l='MpServer', x=-113,50, y=43,00, z=-254,50], EntityOtherPlayerMP['Hawar_Topp'/1201995, l='MpServer', x=-83,63, y=41,00, z=-250,09], EntityOtherPlayerMP[''/1359725, l='MpServer', x=-113,50, y=43,00, z=-238,50], EntityOtherPlayerMP[''/1359714, l='MpServer', x=-81,50, y=42,00, z=-246,50], EntityOtherPlayerMP[''/1359704, l='MpServer', x=-87,50, y=42,00, z=-235,50], EntityArmorStand['§c§lBedWars'/1211470, l='MpServer', x=-83,50, y=44,09, z=-239,50], EntityOtherPlayerMP[''/1359688, l='MpServer', x=-113,50, y=43,00, z=-254,50], EntityOtherPlayerMP[''/1359708, l='MpServer', x=-104,50, y=43,00, z=-241,50], EntityItem['item.item.bed'/1211471, l='MpServer', x=-83,50, y=44,59, z=-239,50], EntityOtherPlayerMP[''/1359721, l='MpServer', x=-121,50, y=43,00, z=-246,50], EntityOtherPlayerMP[''/1359718, l='MpServer', x=-81,50, y=42,00, z=-251,50], EntityArmorStand['§c8 Players'/1211469, l='MpServer', x=-83,50, y=43,78, z=-239,50], EntityArmorStand['§8Discord: §aHyronymos 🥝#6898'/1211506, l='MpServer', x=-121,50, y=44,78, z=-246,50], EntityOtherPlayerMP[''/1359732, l='MpServer', x=-87,50, y=42,00, z=-257,50], EntityArmorStand['§cInstagram: §araduan_alsaleh'/1211507, l='MpServer', x=-121,50, y=45,09, z=-246,50], EntityItem['item.tile.barrier'/1211504, l='MpServer', x=-81,50, y=44,28, z=-251,50], EntityArmorStand['Armor Stand'/1211505, l='MpServer', x=-81,50, y=44,28, z=-251,50], EntityArmorStand['§aFollow §4TenoxYT §aon'/1211510, l='MpServer', x=-113,50, y=45,09, z=-238,50], EntityOtherPlayerMP[''/1359728, l='MpServer', x=-85,50, y=42,00, z=-255,50], EntityArmorStand['§e56 Players'/1211511, l='MpServer', x=-85,50, y=43,78, z=-255,50], EntityArmorStand['§aFollow §4Hyronymos §aon'/1211508, l='MpServer', x=-121,50, y=45,38, z=-246,50], EntityArmorStand['§8Discord: §aTenoxYT#4006'/1211509, l='MpServer', x=-113,50, y=44,78, z=-238,50], EntityArmorStand['Armor Stand'/1211514, l='MpServer', x=-85,50, y=44,59, z=-255,50], EntityOtherPlayerMP['§0'/1359651, l='MpServer', x=2931,50, y=36,00, z=2998,50], EntityArmorStand['§d7 Players'/1211515, l='MpServer', x=-87,50, y=43,78, z=-257,50], EntityOtherPlayerMP['§0'/1359659, l='MpServer', x=2926,50, y=36,00, z=2993,50], EntityArmorStand['§e§lFastBuilders'/1211512, l='MpServer', x=-85,50, y=44,09, z=-255,50], EntityOtherPlayerMP['§0'/1359655, l='MpServer', x=2928,50, y=36,00, z=2996,50], EntityItem['item.tile.sandStone.default'/1211513, l='MpServer', x=-85,50, y=44,59, z=-255,50], EntityArmorStand['Armor Stand'/1211518, l='MpServer', x=-87,50, y=44,59, z=-257,50], EntityArmorStand['§d§lClutches'/1211516, l='MpServer', x=-87,50, y=44,09, z=-257,50], EntityOtherPlayerMP['Herr_Steif'/1211260, l='MpServer', x=-92,63, y=41,00, z=-234,47], EntityItem['item.item.stick'/1211517, l='MpServer', x=-87,50, y=44,59, z=-257,50], EntityArmorStand['§a40 Players'/1211490, l='MpServer', x=-87,50, y=43,78, z=-235,50], EntityArmorStand['§a§lBuildFFA'/1211491, l='MpServer', x=-87,50, y=44,09, z=-235,50], EntityItem['item.item.swordIron'/1211488, l='MpServer', x=-85,50, y=44,59, z=-237,50], EntityOtherPlayerMP[''/1359718, l='MpServer', x=-81,50, y=42,00, z=-251,50], EntityArmorStand['Armor Stand'/1211489, l='MpServer', x=-85,50, y=44,59, z=-237,50], EntityArmorStand['§9VK.com: §atwerion_network'/1211494, l='MpServer', x=-104,50, y=44,78, z=-241,50], EntityArmorStand['§8Discord: §adiscord.twerion.net'/1211495, l='MpServer', x=-104,50, y=45,09, z=-241,50], EntityItem['item.item.fishingRod'/1211492, l='MpServer', x=-87,50, y=44,59, z=-235,50], EntityOtherPlayerMP[''/1359714, l='MpServer', x=-81,50, y=42,00, z=-246,50], EntityOtherPlayerMP['evaap'/1210469, l='MpServer', x=-113,96, y=42,00, z=-244,34], EntityArmorStand['Armor Stand'/1211493, l='MpServer', x=-87,50, y=44,59, z=-235,50], EntityArmorStand['§aFollow §cTwerion §aon'/1211498, l='MpServer', x=-104,50, y=46,00, z=-241,50], EntityArmorStand['§95 Players'/1211499, l='MpServer', x=-81,50, y=43,78, z=-246,50], EntityOtherPlayerMP[''/1359725, l='MpServer', x=-113,50, y=43,00, z=-238,50], EntityArmorStand['§cInstagram: §aTwerion_network'/1211496, l='MpServer', x=-104,50, y=45,38, z=-241,50], EntityArmorStand['§bTwitter: §aTwerionnetwork'/1211497, l='MpServer', x=-104,50, y=45,69, z=-241,50], EntityArmorStand['Armor Stand'/1211502, l='MpServer', x=-81,50, y=44,59, z=-246,50], EntityArmorStand['§c§lComing soon'/1211503, l='MpServer', x=-81,50, y=43,78, z=-251,50], EntityOtherPlayerMP[''/1359721, l='MpServer', x=-121,50, y=43,00, z=-246,50], EntityArmorStand['§9§lSkyBlock §e§l*UPDATE*'/1211500, l='MpServer', x=-81,50, y=44,09, z=-246,50], EntityItem['item.tile.grass'/1211501, l='MpServer', x=-81,50, y=44,59, z=-246,50], EntityOtherPlayerMP['thedenizzz'/1211017, l='MpServer', x=-101,03, y=44,49, z=-247,21], EntityOtherPlayerMP['Soul_'/1208461, l='MpServer', x=-85,53, y=42,34, z=-258,78], EntityOtherPlayerMP['PuntoYT'/1211098, l='MpServer', x=-86,50, y=41,00, z=-255,03], EntityOtherPlayerMP['zxcKronge'/1208542, l='MpServer', x=-87,91, y=43,13, z=-240,91], EntityOtherPlayerMP['ViperMini'/1211357, l='MpServer', x=-108,13, y=44,59, z=-246,50]]
+	Retry entities: 0 total; []
+	Server brand: TwerionNet (Velocity)
+	Server type: Non-integrated multiplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:356)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2612)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:383)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.9
+	Operating System: Windows 8.1 (amd64) version 6.3
+	Java Version: 1.8.0_51, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 718298552 bytes (685 MB) / 985137152 bytes (939 MB) up to 3797417984 bytes (3621 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 95
+	Launched Version: mcp
+	LWJGL: 2.9.4
+	OpenGL: NVIDIA GeForce GTX 1650/PCIe/SSE2 GL version 4.6.0 NVIDIA 531.79, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: No
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: Dizz_Mash_v2_3Blue.zip
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 8x Intel(R) Core(TM) i5-9300H CPU @ 2.40GHz
+	OptiFine Version: OptiFine_1.8.9_HD_U_M6_pre2
+	OptiFine Build: ~~NULL~~
+	Render Distance Chunks: 7
+	Mipmaps: 4
+	Anisotropic Filtering: 1
+	Antialiasing: 0
+	Multitexture: false
+	Shaders: null
+	OpenGlVersion: 4.6.0 NVIDIA 531.79
+	OpenGlRenderer: NVIDIA GeForce GTX 1650/PCIe/SSE2
+	OpenGlVendor: NVIDIA Corporation
+	CpuCount: 8
